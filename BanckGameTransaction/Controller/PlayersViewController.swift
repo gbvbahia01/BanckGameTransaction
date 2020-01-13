@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlayersViewController.swift
 //  BanckGameTransaction
 //
 //  Created by Guilherme B V Bahia on 13/01/20.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class PlayersViewController: ViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        hiddenNavigation = true
     }
-
-
 }
-
