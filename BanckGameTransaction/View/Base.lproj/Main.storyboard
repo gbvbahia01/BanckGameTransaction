@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="46J-8O-lwb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="46J-8O-lwb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -98,12 +98,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-FJ-PSG">
                                 <rect key="frame" x="0.0" y="20" width="414" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="shE-2K-ULo">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="shE-2K-ULo">
                                         <rect key="frame" x="20" y="20" width="374" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novo Jogo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttv-uY-erU">
-                                                <rect key="frame" x="95" y="0.0" width="184.5" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148.5" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" name="AppLightGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -119,12 +119,104 @@
                                     <constraint firstAttribute="height" constant="100" id="uYy-os-AhD"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mba-96-GeU">
+                                <rect key="frame" x="224" y="20" width="180" height="180"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Players" translatesAutoresizingMaskIntoConstraints="NO" id="lHu-pw-yDp">
+                                        <rect key="frame" x="15" y="15" width="150" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="AppRed"/>
+                                <constraints>
+                                    <constraint firstItem="lHu-pw-yDp" firstAttribute="centerX" secondItem="mba-96-GeU" secondAttribute="centerX" id="8hG-Ek-uf8"/>
+                                    <constraint firstItem="lHu-pw-yDp" firstAttribute="top" secondItem="mba-96-GeU" secondAttribute="top" constant="15" id="Hlj-E3-QbO"/>
+                                    <constraint firstAttribute="height" constant="180" id="QJD-el-KvQ"/>
+                                    <constraint firstItem="lHu-pw-yDp" firstAttribute="centerY" secondItem="mba-96-GeU" secondAttribute="centerY" id="g8p-zv-MGi"/>
+                                    <constraint firstItem="lHu-pw-yDp" firstAttribute="leading" secondItem="mba-96-GeU" secondAttribute="leading" constant="15" id="iX7-aF-kyr"/>
+                                    <constraint firstAttribute="width" constant="180" id="jXD-kz-PNY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SZi-pe-Cbq">
+                                <rect key="frame" x="30" y="230" width="354" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="449-0u-y4C">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="150"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBx-g3-fvd">
+                                                <rect key="frame" x="20" y="20" width="314" height="110"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="uDt-Aw-JFf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" title="Iniciar Jogo" backgroundImage="ButtonRec">
+                                                    <color key="titleColor" name="AppLightGray"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DBx-g3-fvd" firstAttribute="top" secondItem="449-0u-y4C" secondAttribute="top" constant="20" id="8Az-lJ-kZz"/>
+                                            <constraint firstItem="DBx-g3-fvd" firstAttribute="leading" secondItem="449-0u-y4C" secondAttribute="leading" constant="20" id="K3E-eP-zqO"/>
+                                            <constraint firstAttribute="trailing" secondItem="DBx-g3-fvd" secondAttribute="trailing" constant="20" id="eQW-48-Gd3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIu-Qi-I4c">
+                                        <rect key="frame" x="20" y="150" width="314" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor por jogador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7R-8L-zQJ">
+                                                <rect key="frame" x="30" y="30" width="212" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <color key="textColor" name="AppBlue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor Inicial" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-P4-Hhd">
+                                                <rect key="frame" x="10" y="73.5" width="294" height="50"/>
+                                                <color key="backgroundColor" name="AppLightGray"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="3hk-t9-PnB"/>
+                                                </constraints>
+                                                <color key="textColor" name="AppBlue"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AppRed"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Z8y-P4-Hhd" secondAttribute="trailing" constant="10" id="BgT-7z-ZWk"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h7R-8L-zQJ" secondAttribute="trailing" constant="20" symbolic="YES" id="JSD-v5-ZQK"/>
+                                            <constraint firstItem="h7R-8L-zQJ" firstAttribute="leading" secondItem="BIu-Qi-I4c" secondAttribute="leading" constant="30" id="Jpq-DN-x95"/>
+                                            <constraint firstItem="Z8y-P4-Hhd" firstAttribute="top" secondItem="h7R-8L-zQJ" secondAttribute="bottom" constant="10" id="gpM-2C-e1S"/>
+                                            <constraint firstItem="h7R-8L-zQJ" firstAttribute="top" secondItem="BIu-Qi-I4c" secondAttribute="top" constant="30" id="rdy-ia-xwT"/>
+                                            <constraint firstItem="Z8y-P4-Hhd" firstAttribute="leading" secondItem="BIu-Qi-I4c" secondAttribute="leading" constant="10" id="z0j-SK-Ryk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BIu-Qi-I4c" firstAttribute="leading" secondItem="SZi-pe-Cbq" secondAttribute="leading" constant="20" symbolic="YES" id="Evt-gS-KqR"/>
+                                    <constraint firstAttribute="trailing" secondItem="BIu-Qi-I4c" secondAttribute="trailing" constant="20" symbolic="YES" id="NNj-yV-UWw"/>
+                                    <constraint firstAttribute="height" constant="300" id="rWb-bq-syD"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="AppOrange"/>
                         <constraints>
                             <constraint firstItem="lI3-FJ-PSG" firstAttribute="trailing" secondItem="K0B-zx-dYx" secondAttribute="trailing" id="FBg-pR-kcq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SZi-pe-Cbq" secondAttribute="trailing" constant="10" id="J3Y-75-wBl"/>
                             <constraint firstItem="lI3-FJ-PSG" firstAttribute="leading" secondItem="K0B-zx-dYx" secondAttribute="leading" id="aiI-ik-Yjr"/>
+                            <constraint firstItem="mba-96-GeU" firstAttribute="top" secondItem="ixA-fv-xNA" secondAttribute="top" constant="20" id="cI1-xD-DDT"/>
                             <constraint firstItem="lI3-FJ-PSG" firstAttribute="top" secondItem="ixA-fv-xNA" secondAttribute="top" constant="20" symbolic="YES" id="me1-qX-c51"/>
+                            <constraint firstItem="K0B-zx-dYx" firstAttribute="trailing" secondItem="mba-96-GeU" secondAttribute="trailing" constant="10" id="saD-fT-V9U"/>
+                            <constraint firstItem="SZi-pe-Cbq" firstAttribute="top" secondItem="mba-96-GeU" secondAttribute="bottom" constant="30" id="uc7-f4-AXF"/>
+                            <constraint firstItem="SZi-pe-Cbq" firstAttribute="leading" secondItem="K0B-zx-dYx" secondAttribute="leading" constant="30" id="xs2-nJ-WtH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K0B-zx-dYx"/>
                     </view>
@@ -216,11 +308,18 @@
     <resources>
         <image name="ButtonRec" width="1370.5" height="363"/>
         <image name="Payment" width="64" height="64"/>
+        <image name="Players" width="37.5" height="37.5"/>
         <namedColor name="AppBlue">
             <color red="0.37299999594688416" green="0.42399999499320984" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppLightGray">
             <color red="0.92900002002716064" green="0.96899998188018799" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppOrange">
+            <color red="1" green="0.71399998664855957" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppRed">
+            <color red="1" green="0.51399999856948853" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

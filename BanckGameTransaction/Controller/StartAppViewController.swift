@@ -19,7 +19,8 @@ class StartAppViewController: ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(#function)
         if K.SEGUE.START_TO_NEW_GAME == segue.identifier {
-            
+            // TODO check if is a old game not finished
+            // If have, show a alert asking the user.
         }
     }
     
