@@ -17,6 +17,8 @@
 		0F28C11C23CD2BAB00D09052 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28C11B23CD2BAB00D09052 /* Constants.swift */; };
 		0F28C11E23CD2E0B00D09052 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28C11D23CD2E0B00D09052 /* ViewController.swift */; };
 		0F28C12023CD2FA800D09052 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28C11F23CD2FA800D09052 /* PlayersViewController.swift */; };
+		0F6B18E923CFC33100C492A2 /* StartMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */; };
+		0F6B18EF23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */; };
 		EC069F35A469125CCFDB8039 /* Pods_BanckGameTransaction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA9EC7CDEB0406EEB75D3AA /* Pods_BanckGameTransaction.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		0F28C11B23CD2BAB00D09052 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F28C11D23CD2E0B00D09052 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F28C11F23CD2FA800D09052 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMoneyViewController.swift; sourceTree = "<group>"; };
+		0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtNSLayoutConstraint.swift; sourceTree = "<group>"; };
 		2D0AB8569F9C7D46DC64BA55 /* Pods-BanckGameTransaction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanckGameTransaction.release.xcconfig"; path = "Target Support Files/Pods-BanckGameTransaction/Pods-BanckGameTransaction.release.xcconfig"; sourceTree = "<group>"; };
 		A43AF129757BA7AD3A911B6B /* Pods-BanckGameTransaction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanckGameTransaction.debug.xcconfig"; path = "Target Support Files/Pods-BanckGameTransaction/Pods-BanckGameTransaction.debug.xcconfig"; sourceTree = "<group>"; };
 		CDA9EC7CDEB0406EEB75D3AA /* Pods_BanckGameTransaction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanckGameTransaction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,8 @@
 				0F28C11D23CD2E0B00D09052 /* ViewController.swift */,
 				0F28C10723CD0EB400D09052 /* StartAppViewController.swift */,
 				0F28C11F23CD2FA800D09052 /* PlayersViewController.swift */,
+				0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */,
+				0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,7 +122,6 @@
 				A43AF129757BA7AD3A911B6B /* Pods-BanckGameTransaction.debug.xcconfig */,
 				2D0AB8569F9C7D46DC64BA55 /* Pods-BanckGameTransaction.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -239,7 +244,9 @@
 				0F28C11E23CD2E0B00D09052 /* ViewController.swift in Sources */,
 				0F28C10823CD0EB400D09052 /* StartAppViewController.swift in Sources */,
 				0F28C10423CD0EB400D09052 /* AppDelegate.swift in Sources */,
+				0F6B18EF23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift in Sources */,
 				0F28C10623CD0EB400D09052 /* SceneDelegate.swift in Sources */,
+				0F6B18E923CFC33100C492A2 /* StartMoneyViewController.swift in Sources */,
 				0F28C11C23CD2BAB00D09052 /* Constants.swift in Sources */,
 				0F28C12023CD2FA800D09052 /* PlayersViewController.swift in Sources */,
 			);

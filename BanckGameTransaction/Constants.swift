@@ -11,6 +11,7 @@ import Foundation
 struct K {
     
     struct SEGUE {
-        static let START_TO_NEW_GAME = "newGameSegue"
+        static let TO_PLAYERS_PAGE = "toPlayersPage"
+        static let TO_MONEY_PAGE = "toStartMoneyPage"
     }
 }

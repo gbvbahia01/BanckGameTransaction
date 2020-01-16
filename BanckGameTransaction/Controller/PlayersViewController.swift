@@ -14,4 +14,19 @@ class PlayersViewController: ViewController {
         super.viewDidLoad()
         hiddenNavigation = true
     }
+    
+    //MARK: - SEGUE CALL
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(#function)
+        if K.SEGUE.TO_MONEY_PAGE == segue.identifier {
+            // TODO check if at least two players were selected
+        }
+    }
+    
+    @IBAction func startValueBtTapped(_ sender: UIButton) {
+        print(#function)
+        performSegue(withIdentifier: K.SEGUE.TO_MONEY_PAGE,
+        sender: self)
+    }
+    
 }
