@@ -304,11 +304,99 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJP-CR-sUK">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dbz-BQ-Fjx">
+                                                        <rect key="frame" x="10" y="12" width="354" height="36"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="map-Ob-d0E">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="36" identifier="color_player_black_1" id="MAZ-61-dje"/>
+                                                                    <constraint firstAttribute="height" constant="36" identifier="color_player_black_2" id="eM9-qs-RwJ"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nT7-73-2om">
+                                                                <rect key="frame" x="46" y="0.0" width="249" height="36"/>
+                                                                <color key="textColor" name="AppBlue"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJG-B2-LdR">
+                                                                <rect key="frame" x="305" y="0.0" width="51" height="36"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="oJG-B2-LdR" firstAttribute="centerY" secondItem="dbz-BQ-Fjx" secondAttribute="centerY" identifier="pblack_6" id="428-wj-l28"/>
+                                                            <constraint firstItem="nT7-73-2om" firstAttribute="centerY" secondItem="dbz-BQ-Fjx" secondAttribute="centerY" identifier="pblack_5" id="9LN-jf-qhj"/>
+                                                            <constraint firstItem="map-Ob-d0E" firstAttribute="centerY" secondItem="dbz-BQ-Fjx" secondAttribute="centerY" identifier="pblack_4" id="a0b-IY-IBZ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="AppRed"/>
+                                                <constraints>
+                                                    <constraint firstItem="dbz-BQ-Fjx" firstAttribute="centerY" secondItem="ZJP-CR-sUK" secondAttribute="centerY" identifier="pblack_1" id="47H-Xe-tma"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dbz-BQ-Fjx" secondAttribute="trailing" constant="10" identifier="pblack_2" id="Ocv-5U-3Z9"/>
+                                                    <constraint firstItem="dbz-BQ-Fjx" firstAttribute="leading" secondItem="ZJP-CR-sUK" secondAttribute="leading" constant="10" identifier="pblack_3" id="vB9-hf-3va"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifG-uP-tZ2">
                                                 <rect key="frame" x="0.0" y="70" width="374" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-a5-p1d">
+                                                        <rect key="frame" x="10" y="12" width="354" height="36"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejm-gL-bBc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="36" identifier="color_player_red_2" id="L5v-ef-J4V"/>
+                                                                    <constraint firstAttribute="width" constant="36" identifier="color_player_red_1" id="gbC-MM-CdJ"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAf-eq-zxI">
+                                                                <rect key="frame" x="46" y="0.0" width="249" height="36"/>
+                                                                <color key="textColor" name="AppBlue"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0g-TR-3dV">
+                                                                <rect key="frame" x="305" y="0.0" width="51" height="36"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="pAf-eq-zxI" firstAttribute="centerY" secondItem="sQn-a5-p1d" secondAttribute="centerY" identifier="pred_2" id="74C-vW-xrU"/>
+                                                            <constraint firstItem="Ejm-gL-bBc" firstAttribute="centerY" secondItem="sQn-a5-p1d" secondAttribute="centerY" identifier="pred_1" id="Wgn-Ov-Uw7"/>
+                                                            <constraint firstItem="x0g-TR-3dV" firstAttribute="centerY" secondItem="sQn-a5-p1d" secondAttribute="centerY" identifier="pred_3" id="t44-1x-LcK"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="AppRed"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="sQn-a5-p1d" secondAttribute="trailing" constant="10" identifier="pred_4" id="6Ld-46-C42"/>
+                                                    <constraint firstItem="sQn-a5-p1d" firstAttribute="centerY" secondItem="ifG-uP-tZ2" secondAttribute="centerY" identifier="pred_5" id="Hqe-cF-0X9"/>
+                                                    <constraint firstItem="sQn-a5-p1d" firstAttribute="leading" secondItem="ifG-uP-tZ2" secondAttribute="leading" constant="10" identifier="pred_6" id="urF-QU-5qC"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -317,11 +405,99 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpY-oO-5Ae">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j3z-wt-pA2">
+                                                        <rect key="frame" x="10" y="12" width="354" height="36"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIn-A7-rIT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="36" identifier="color_player_blue_1" id="5D0-vM-oza"/>
+                                                                    <constraint firstAttribute="height" constant="36" identifier="color_player_blue_2" id="tdN-0l-DbE"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHs-8S-ndc">
+                                                                <rect key="frame" x="46" y="0.0" width="249" height="36"/>
+                                                                <color key="textColor" name="AppBlue"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Axx-pP-35C">
+                                                                <rect key="frame" x="305" y="0.0" width="51" height="36"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="MHs-8S-ndc" firstAttribute="centerY" secondItem="j3z-wt-pA2" secondAttribute="centerY" identifier="pblue_2" id="A7G-eC-xML"/>
+                                                            <constraint firstItem="tIn-A7-rIT" firstAttribute="centerY" secondItem="j3z-wt-pA2" secondAttribute="centerY" identifier="pblue_1" id="hdL-K6-1nF"/>
+                                                            <constraint firstItem="Axx-pP-35C" firstAttribute="centerY" secondItem="j3z-wt-pA2" secondAttribute="centerY" identifier="pblue_3" id="sx4-Yf-EDN"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="AppRed"/>
+                                                <constraints>
+                                                    <constraint firstItem="j3z-wt-pA2" firstAttribute="leading" secondItem="zpY-oO-5Ae" secondAttribute="leading" constant="10" identifier="pblue_4" id="aBB-P3-LTV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="j3z-wt-pA2" secondAttribute="trailing" constant="10" identifier="pblue_6" id="jnn-zB-hgK"/>
+                                                    <constraint firstItem="j3z-wt-pA2" firstAttribute="centerY" secondItem="zpY-oO-5Ae" secondAttribute="centerY" identifier="pblue_5" id="za4-VD-Ska"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-I0-5me">
                                                 <rect key="frame" x="0.0" y="70" width="374" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xbb-gY-a3s">
+                                                        <rect key="frame" x="10" y="12" width="354" height="36"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcE-gk-bcD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="36" identifier="color_player_yel_2" id="L2F-6O-5BG"/>
+                                                                    <constraint firstAttribute="width" constant="36" identifier="color_player_yel_1" id="c8M-2A-9H0"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r92-Ek-GLa">
+                                                                <rect key="frame" x="46" y="0.0" width="249" height="36"/>
+                                                                <color key="textColor" name="AppBlue"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tVC-rD-fwz">
+                                                                <rect key="frame" x="305" y="0.0" width="51" height="36"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="tVC-rD-fwz" firstAttribute="centerY" secondItem="Xbb-gY-a3s" secondAttribute="centerY" identifier="py_3" id="kOH-KR-rst"/>
+                                                            <constraint firstItem="r92-Ek-GLa" firstAttribute="centerY" secondItem="Xbb-gY-a3s" secondAttribute="centerY" identifier="py_2" id="lLY-3Z-ZDf"/>
+                                                            <constraint firstItem="OcE-gk-bcD" firstAttribute="centerY" secondItem="Xbb-gY-a3s" secondAttribute="centerY" identifier="py_1" id="wUH-vl-ffB"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="AppRed"/>
+                                                <constraints>
+                                                    <constraint firstItem="Xbb-gY-a3s" firstAttribute="leading" secondItem="Uch-I0-5me" secondAttribute="leading" constant="10" identifier="py_4" id="8aF-QM-bJz"/>
+                                                    <constraint firstItem="Xbb-gY-a3s" firstAttribute="centerY" secondItem="Uch-I0-5me" secondAttribute="centerY" identifier="py_5" id="Gcr-q7-A7U"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Xbb-gY-a3s" secondAttribute="trailing" constant="10" identifier="py_6" id="yv6-BB-z7L"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -330,11 +506,94 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94c-Ax-g2d">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NM6-Zc-IlR">
+                                                        <rect key="frame" x="10" y="12" width="354" height="36"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-NJ-00y">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="36" identifier="color_player_white_2" id="O6B-Pb-cMb"/>
+                                                                    <constraint firstAttribute="width" constant="36" identifier="color_player_white_1" id="TYc-Xc-1sF"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LDp-dg-ADc">
+                                                                <rect key="frame" x="46" y="0.0" width="249" height="36"/>
+                                                                <color key="textColor" name="AppBlue"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OVc-k6-fxf">
+                                                                <rect key="frame" x="305" y="0.0" width="51" height="36"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="OVc-k6-fxf" firstAttribute="centerY" secondItem="NM6-Zc-IlR" secondAttribute="centerY" identifier="pw_3" id="7UA-ph-l1K"/>
+                                                            <constraint firstItem="Ehe-NJ-00y" firstAttribute="centerY" secondItem="NM6-Zc-IlR" secondAttribute="centerY" identifier="pw_1" id="9Fz-6q-aab"/>
+                                                            <constraint firstItem="LDp-dg-ADc" firstAttribute="centerY" secondItem="NM6-Zc-IlR" secondAttribute="centerY" identifier="pw_2" id="UkM-xf-375"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="AppRed"/>
+                                                <constraints>
+                                                    <constraint firstItem="NM6-Zc-IlR" firstAttribute="leading" secondItem="94c-Ax-g2d" secondAttribute="leading" constant="10" identifier="pw_4" id="7je-Bm-1E8"/>
+                                                    <constraint firstItem="NM6-Zc-IlR" firstAttribute="centerY" secondItem="94c-Ax-g2d" secondAttribute="centerY" identifier="pw_5" id="7q0-Ax-6Bv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NM6-Zc-IlR" secondAttribute="trailing" constant="10" identifier="pw_6" id="8zj-jx-RAg"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1O-Dc-4tP">
                                                 <rect key="frame" x="0.0" y="70" width="374" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VyD-X9-QBx">
+                                                        <rect key="frame" x="10" y="12" width="354" height="36"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKt-vf-CTk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="36" identifier="color_player_green_1" id="Vus-jG-kRb"/>
+                                                                    <constraint firstAttribute="height" constant="36" identifier="color_player_green_2" id="YeY-wj-aur"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ujt-eJ-yBW">
+                                                                <rect key="frame" x="46" y="0.0" width="249" height="34"/>
+                                                                <color key="textColor" name="AppBlue"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Knv-kC-Kwk">
+                                                                <rect key="frame" x="305" y="0.0" width="51" height="31"/>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="AppRed"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="VyD-X9-QBx" secondAttribute="trailing" constant="10" identifier="pgreen_1" id="0ei-cy-Jv4"/>
+                                                    <constraint firstItem="VyD-X9-QBx" firstAttribute="centerY" secondItem="m1O-Dc-4tP" secondAttribute="centerY" identifier="pgreen_2" id="fEv-HI-rnc"/>
+                                                    <constraint firstItem="VyD-X9-QBx" firstAttribute="leading" secondItem="m1O-Dc-4tP" secondAttribute="leading" constant="10" identifier="pgreen_3" id="nsK-DD-qOw"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -349,9 +608,9 @@
                             <constraint firstItem="rFr-iq-1CM" firstAttribute="top" secondItem="tAh-pI-SEh" secondAttribute="top" identifier="c12" id="bke-Ab-cMa"/>
                             <constraint firstItem="rFr-iq-1CM" firstAttribute="leading" secondItem="tAh-pI-SEh" secondAttribute="leading" identifier="c13" id="cjA-Kx-RV9"/>
                             <constraint firstItem="rFr-iq-1CM" firstAttribute="trailing" secondItem="tAh-pI-SEh" secondAttribute="trailing" identifier="c14" id="f38-9Z-Y4H"/>
-                            <constraint firstItem="tAh-pI-SEh" firstAttribute="bottom" secondItem="y2g-Cn-XaI" secondAttribute="bottom" constant="22" identifier="c16" id="lNn-9K-lw3"/>
-                            <constraint firstItem="ilT-JL-iHm" firstAttribute="top" secondItem="tAh-pI-SEh" secondAttribute="top" constant="15" identifier="c18" id="mXf-DS-mzV"/>
-                            <constraint firstItem="y2g-Cn-XaI" firstAttribute="top" secondItem="ilT-JL-iHm" secondAttribute="bottom" constant="7" identifier="c22" id="zFD-KM-bwx"/>
+                            <constraint firstItem="tAh-pI-SEh" firstAttribute="bottom" secondItem="y2g-Cn-XaI" secondAttribute="bottom" priority="999" constant="22" identifier="c16" id="lNn-9K-lw3"/>
+                            <constraint firstItem="ilT-JL-iHm" firstAttribute="top" secondItem="tAh-pI-SEh" secondAttribute="top" priority="999" constant="15" identifier="c18" id="mXf-DS-mzV"/>
+                            <constraint firstItem="y2g-Cn-XaI" firstAttribute="top" secondItem="ilT-JL-iHm" secondAttribute="bottom" priority="999" constant="7" identifier="c22" id="zFD-KM-bwx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tAh-pI-SEh"/>
                     </view>
