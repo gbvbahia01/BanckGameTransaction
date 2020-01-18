@@ -14,4 +14,19 @@ class StartMoneyViewController: ViewController {
         super.viewDidLoad()
         hiddenNavigation = false
     }
+    
+    //MARK: - SEGUE CALL
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(#function)
+        if K.SEGUE.TO_GAME_PAGE == segue.identifier {
+            // TODO check if at least two players were selected
+        }
+    }
+    
+    @IBAction func startGameTapped(_ sender: UIButton) {
+        print(#function)
+        performSegue(withIdentifier: K.SEGUE.TO_GAME_PAGE,
+                     sender: self)
+    }
+    
 }

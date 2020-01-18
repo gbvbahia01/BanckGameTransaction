@@ -156,6 +156,9 @@
                                                 <state key="normal" title="Iniciar Jogo" backgroundImage="ButtonRec">
                                                     <color key="titleColor" name="AppLightGray"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="startGameTapped:" destination="Vzg-Vj-vWl" eventType="touchUpInside" id="TjL-L6-Cab"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -221,6 +224,9 @@
                         <viewLayoutGuide key="safeArea" id="K0B-zx-dYx"/>
                     </view>
                     <navigationItem key="navigationItem" id="92j-4j-iWv"/>
+                    <connections>
+                        <segue destination="1b5-Gt-xYH" kind="show" identifier="goToGame" id="VK5-pT-tzG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxP-MB-vzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,7 +294,7 @@
                                                     <color key="titleColor" name="AppLightGray"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="startValueBtTapped:" destination="xKU-fo-LKT" eventType="touchUpInside" id="1AF-1t-Gt0"/>
+                                                    <action selector="startValueTapped:" destination="xKU-fo-LKT" eventType="touchUpInside" id="1AF-1t-Gt0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -623,16 +629,71 @@
             </objects>
             <point key="canvasLocation" x="1737.68115942029" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="uHK-6H-qVU">
             <objects>
-                <viewController id="1b5-Gt-xYH" sceneMemberID="viewController">
+                <viewController id="1b5-Gt-xYH" customClass="GameViewController" customModule="BanckGameTransaction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zVU-75-7rC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablePlayerBalanceID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W7R-K4-KIB">
+                                <rect key="frame" x="10" y="88" width="394" height="199.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablePlayerTransactionID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kG2-fl-2gm">
+                                <rect key="frame" x="10" y="437.5" width="394" height="414.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-sb-HFs">
+                                <rect key="frame" x="20" y="297.5" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Z2m-6u-eM5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Realizar Pagamento" image="bt_pay" backgroundImage="RedRec">
+                                    <color key="titleColor" name="AppLightGray"/>
+                                </state>
+                                <connections>
+                                    <action selector="transactionTapped:" destination="1b5-Gt-xYH" eventType="touchUpInside" id="dGe-he-l3h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-rK-nE3">
+                                <rect key="frame" x="20" y="367.5" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ARJ-ue-QCg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Finalizar Jogo" image="bt_end" backgroundImage="RedRec">
+                                    <color key="titleColor" name="AppLightGray"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="AppBlue"/>
+                        <constraints>
+                            <constraint firstItem="6z2-U0-3vS" firstAttribute="trailing" secondItem="y8p-rK-nE3" secondAttribute="trailing" constant="20" id="4dP-xp-UTZ"/>
+                            <constraint firstItem="W7R-K4-KIB" firstAttribute="top" secondItem="6z2-U0-3vS" secondAttribute="top" id="80S-Xp-uut"/>
+                            <constraint firstItem="y8p-rK-nE3" firstAttribute="leading" secondItem="6z2-U0-3vS" secondAttribute="leading" constant="20" id="BNM-Ae-DBH"/>
+                            <constraint firstItem="6z2-U0-3vS" firstAttribute="bottom" secondItem="W7R-K4-KIB" secondAttribute="bottom" multiplier="3" id="LxT-e7-bZn"/>
+                            <constraint firstItem="y8p-rK-nE3" firstAttribute="top" secondItem="WPh-sb-HFs" secondAttribute="bottom" constant="10" id="OEh-2u-Alg"/>
+                            <constraint firstItem="kG2-fl-2gm" firstAttribute="leading" secondItem="6z2-U0-3vS" secondAttribute="leading" constant="10" id="Pwx-gk-4R3"/>
+                            <constraint firstItem="WPh-sb-HFs" firstAttribute="leading" secondItem="zVU-75-7rC" secondAttribute="leading" constant="20" id="iSd-Fr-509"/>
+                            <constraint firstItem="6z2-U0-3vS" firstAttribute="trailing" secondItem="kG2-fl-2gm" secondAttribute="trailing" constant="10" id="lO2-k8-OOp"/>
+                            <constraint firstItem="kG2-fl-2gm" firstAttribute="bottom" secondItem="6z2-U0-3vS" secondAttribute="bottom" constant="-10" id="oId-8x-3lc"/>
+                            <constraint firstAttribute="trailing" secondItem="WPh-sb-HFs" secondAttribute="trailing" constant="20" id="rAw-Z5-a9X"/>
+                            <constraint firstItem="6z2-U0-3vS" firstAttribute="trailing" secondItem="W7R-K4-KIB" secondAttribute="trailing" constant="10" id="rHE-vM-hcH"/>
+                            <constraint firstItem="WPh-sb-HFs" firstAttribute="top" secondItem="W7R-K4-KIB" secondAttribute="bottom" constant="10" id="wAH-Ci-7rS"/>
+                            <constraint firstItem="kG2-fl-2gm" firstAttribute="top" secondItem="y8p-rK-nE3" secondAttribute="bottom" constant="10" id="wIr-ge-uOH"/>
+                            <constraint firstItem="W7R-K4-KIB" firstAttribute="leading" secondItem="6z2-U0-3vS" secondAttribute="leading" constant="10" id="wXB-kd-QUg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6z2-U0-3vS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZJQ-0l-LFj"/>
+                    <connections>
+                        <outlet property="balancePlayerTable" destination="W7R-K4-KIB" id="oyk-nW-oq7"/>
+                        <outlet property="transactionPlayerTable" destination="kG2-fl-2gm" id="3om-ZN-EHg"/>
+                        <segue destination="Ht6-lk-TRr" kind="show" identifier="goToTransaction" id="Src-LY-lbj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZN-B6-NiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -648,6 +709,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Yp-sT-h3F"/>
                     </view>
+                    <navigationItem key="navigationItem" id="F0K-Jn-W1G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXA-ld-HMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -692,6 +754,9 @@
         <image name="MoneyPlayers" width="37.5" height="37.5"/>
         <image name="Payment" width="64" height="64"/>
         <image name="Players" width="37.5" height="37.5"/>
+        <image name="RedRec" width="1370.5" height="363"/>
+        <image name="bt_end" width="40" height="40"/>
+        <image name="bt_pay" width="40" height="40"/>
         <namedColor name="AppBlue">
             <color red="0.37299999594688416" green="0.42399999499320984" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

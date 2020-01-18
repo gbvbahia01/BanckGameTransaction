@@ -27,7 +27,7 @@ class StartAppViewController: ViewController {
     @IBAction func newGameTapped(_ sender: UIButton) {
         print(#function)
         performSegue(withIdentifier: K.SEGUE.TO_PLAYERS_PAGE,
-        sender: self)
+                     sender: self)
     }
     
 }

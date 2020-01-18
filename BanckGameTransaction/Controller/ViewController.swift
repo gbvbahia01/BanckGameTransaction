@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     
     var hiddenNavigation = false
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor(named: K.ASSETS_NAME.COLOR_RED)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
           super.viewWillAppear(animated);
           navigationController?.isNavigationBarHidden = hiddenNavigation;

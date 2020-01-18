@@ -19,6 +19,11 @@
 		0F28C12023CD2FA800D09052 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28C11F23CD2FA800D09052 /* PlayersViewController.swift */; };
 		0F6B18E923CFC33100C492A2 /* StartMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */; };
 		0F6B18EF23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */; };
+		0F8B1C4023D395E1007CDFDC /* BanckTransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B1C3E23D395E1007CDFDC /* BanckTransactionViewCell.swift */; };
+		0F8B1C4123D395E1007CDFDC /* BanckTransactionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8B1C3F23D395E1007CDFDC /* BanckTransactionViewCell.xib */; };
+		0FAFD46223D30A3E00243100 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFD46123D30A3E00243100 /* GameViewController.swift */; };
+		0FAFD46623D328D800243100 /* BanckBalanceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFD46423D328D800243100 /* BanckBalanceViewCell.swift */; };
+		0FAFD46723D328D800243100 /* BanckBalanceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAFD46523D328D800243100 /* BanckBalanceViewCell.xib */; };
 		EC069F35A469125CCFDB8039 /* Pods_BanckGameTransaction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA9EC7CDEB0406EEB75D3AA /* Pods_BanckGameTransaction.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,11 @@
 		0F28C11F23CD2FA800D09052 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMoneyViewController.swift; sourceTree = "<group>"; };
 		0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtNSLayoutConstraint.swift; sourceTree = "<group>"; };
+		0F8B1C3E23D395E1007CDFDC /* BanckTransactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanckTransactionViewCell.swift; sourceTree = "<group>"; };
+		0F8B1C3F23D395E1007CDFDC /* BanckTransactionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanckTransactionViewCell.xib; sourceTree = "<group>"; };
+		0FAFD46123D30A3E00243100 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0FAFD46423D328D800243100 /* BanckBalanceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanckBalanceViewCell.swift; sourceTree = "<group>"; };
+		0FAFD46523D328D800243100 /* BanckBalanceViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanckBalanceViewCell.xib; sourceTree = "<group>"; };
 		2D0AB8569F9C7D46DC64BA55 /* Pods-BanckGameTransaction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanckGameTransaction.release.xcconfig"; path = "Target Support Files/Pods-BanckGameTransaction/Pods-BanckGameTransaction.release.xcconfig"; sourceTree = "<group>"; };
 		A43AF129757BA7AD3A911B6B /* Pods-BanckGameTransaction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanckGameTransaction.debug.xcconfig"; path = "Target Support Files/Pods-BanckGameTransaction/Pods-BanckGameTransaction.debug.xcconfig"; sourceTree = "<group>"; };
 		CDA9EC7CDEB0406EEB75D3AA /* Pods_BanckGameTransaction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanckGameTransaction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +88,7 @@
 				0F28C10323CD0EB400D09052 /* AppDelegate.swift */,
 				0F28C10523CD0EB400D09052 /* SceneDelegate.swift */,
 				0F28C11B23CD2BAB00D09052 /* Constants.swift */,
+				0FAFD46323D30A7B00243100 /* Model */,
 				0F28C11A23CD2ACA00D09052 /* Controller */,
 				0F28C11923CD2ABC00D09052 /* View */,
 				0F28C10C23CD0EB700D09052 /* Assets.xcassets */,
@@ -92,6 +103,10 @@
 			children = (
 				0F28C10923CD0EB400D09052 /* Main.storyboard */,
 				0F28C10E23CD0EB700D09052 /* LaunchScreen.storyboard */,
+				0FAFD46423D328D800243100 /* BanckBalanceViewCell.swift */,
+				0FAFD46523D328D800243100 /* BanckBalanceViewCell.xib */,
+				0F8B1C3E23D395E1007CDFDC /* BanckTransactionViewCell.swift */,
+				0F8B1C3F23D395E1007CDFDC /* BanckTransactionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,9 +118,17 @@
 				0F28C10723CD0EB400D09052 /* StartAppViewController.swift */,
 				0F28C11F23CD2FA800D09052 /* PlayersViewController.swift */,
 				0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */,
-				0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */,
+				0FAFD46123D30A3E00243100 /* GameViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0FAFD46323D30A7B00243100 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A2B81ADDF08CC64E8564CD4E /* Frameworks */ = {
@@ -188,7 +211,9 @@
 				0F28C11023CD0EB700D09052 /* LaunchScreen.storyboard in Resources */,
 				0F28C10D23CD0EB700D09052 /* Assets.xcassets in Resources */,
 				0F28C11823CD12D300D09052 /* README.md in Resources */,
+				0FAFD46723D328D800243100 /* BanckBalanceViewCell.xib in Resources */,
 				0F28C10B23CD0EB400D09052 /* Main.storyboard in Resources */,
+				0F8B1C4123D395E1007CDFDC /* BanckTransactionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,9 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F28C11E23CD2E0B00D09052 /* ViewController.swift in Sources */,
+				0FAFD46623D328D800243100 /* BanckBalanceViewCell.swift in Sources */,
 				0F28C10823CD0EB400D09052 /* StartAppViewController.swift in Sources */,
+				0F8B1C4023D395E1007CDFDC /* BanckTransactionViewCell.swift in Sources */,
 				0F28C10423CD0EB400D09052 /* AppDelegate.swift in Sources */,
 				0F6B18EF23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift in Sources */,
+				0FAFD46223D30A3E00243100 /* GameViewController.swift in Sources */,
 				0F28C10623CD0EB400D09052 /* SceneDelegate.swift in Sources */,
 				0F6B18E923CFC33100C492A2 /* StartMoneyViewController.swift in Sources */,
 				0F28C11C23CD2BAB00D09052 /* Constants.swift in Sources */,
