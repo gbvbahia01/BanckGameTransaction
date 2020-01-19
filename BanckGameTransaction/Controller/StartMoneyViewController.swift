@@ -11,7 +11,7 @@ import UIKit
 class StartMoneyViewController: ViewController {
     
     @IBOutlet weak var playersSelectedTable: UITableView!
-    @IBOutlet weak var startMoneyField: UITextField!
+    @IBOutlet weak var startMoneyField: CurrencyField!
     
     var game: GamePlaying?
     
@@ -24,7 +24,10 @@ class StartMoneyViewController: ViewController {
                            cellId: K.TABLE_CELL.PLAYER_SELECTED_ID)
         playersSelectedTable.delegate = self
         playersSelectedTable.dataSource = self
+        
+        startMoneyField.locale = locale
     }
+    
     
     //MARK: - SEGUE CALL
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,28 +38,23 @@ class StartMoneyViewController: ViewController {
     }
     
     @IBAction func startGameTapped(_ sender: UIButton) {
-        if let initialValue = startMoneyField.text {
-            let value = initialValue.replacingOccurrences(of: ".", with: "", options: .literal, range: nil)
-                                    .replacingOccurrences(of: ",", with: ".", options: .literal, range: nil)
-           if let money = Double(value) {
-                if let players = game?.players {
-                    for player in players {
-                        player.balance = money
-                    }
-                }
-            } else {
-                valueInvalid(value)
+         let money = (startMoneyField.decimal as NSDecimalNumber).doubleValue
+            if (money <= 0) {
+                valueInvalid(String(money))
+                return
             }
-        } else {
-            valueInvalid(nil)
-        }
-        
+            if let players = game?.players {
+               for player in players {
+                   player.balance = money
+               }
+            }
+       
         performSegue(withIdentifier: K.SEGUE.TO_GAME_PAGE, sender: self)
     }
     
     fileprivate func valueInvalid(_ value: String?) {
         var msg = "";
-        if value != nil && value?.isEmpty ?? false {
+        if value != nil && !(value?.isEmpty ?? true) {
             msg = K.GAME_TEXT.ALERT_MSG_INVALID_VALUE.replacingOccurrences(of: "?1", with: value!, options: .literal, range: nil)
         } else {
             msg = K.GAME_TEXT.ALERT_MSG_EMPTY_INVALID_VALUE

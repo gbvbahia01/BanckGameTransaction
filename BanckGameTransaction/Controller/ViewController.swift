@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var hiddenNavigation = false
+    let locale = Locale(identifier: K.LOCALE.PT_BR)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,15 @@ class ViewController: UIViewController {
                        forCellReuseIdentifier: id)
     }
 
-    
+    func formatToCurrency(value: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.locale = locale
+        formatter.numberStyle = .currency
+        if let formatted = formatter.string(from: value as NSNumber) {
+            return formatted
+        }
+        return ""
+    }
    
 }
 

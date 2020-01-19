@@ -23,6 +23,7 @@
 		0F54AEC223D4853D00E3EFD8 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F54AEC123D4853D00E3EFD8 /* Bank.swift */; };
 		0F54AEC523D4C20900E3EFD8 /* PlayerSelectedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F54AEC323D4C20900E3EFD8 /* PlayerSelectedViewCell.swift */; };
 		0F54AEC623D4C20900E3EFD8 /* PlayerSelectedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F54AEC423D4C20900E3EFD8 /* PlayerSelectedViewCell.xib */; };
+		0F54AEC823D4EC1300E3EFD8 /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F54AEC723D4EC1300E3EFD8 /* CurrencyField.swift */; };
 		0F6B18E923CFC33100C492A2 /* StartMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */; };
 		0F6B18EF23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */; };
 		0F8B1C4023D395E1007CDFDC /* BanckTransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B1C3E23D395E1007CDFDC /* BanckTransactionViewCell.swift */; };
@@ -56,6 +57,7 @@
 		0F54AEC123D4853D00E3EFD8 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		0F54AEC323D4C20900E3EFD8 /* PlayerSelectedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectedViewCell.swift; sourceTree = "<group>"; };
 		0F54AEC423D4C20900E3EFD8 /* PlayerSelectedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerSelectedViewCell.xib; sourceTree = "<group>"; };
+		0F54AEC723D4EC1300E3EFD8 /* CurrencyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
 		0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMoneyViewController.swift; sourceTree = "<group>"; };
 		0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtNSLayoutConstraint.swift; sourceTree = "<group>"; };
 		0F8B1C3E23D395E1007CDFDC /* BanckTransactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanckTransactionViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		0F28C11A23CD2ACA00D09052 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0F54AEC723D4EC1300E3EFD8 /* CurrencyField.swift */,
 				0F28C11D23CD2E0B00D09052 /* ViewController.swift */,
 				0F28C10723CD0EB400D09052 /* StartAppViewController.swift */,
 				0F28C11F23CD2FA800D09052 /* PlayersViewController.swift */,
@@ -311,6 +314,7 @@
 				0F8B1C4323D3A94B007CDFDC /* TransactionViewController.swift in Sources */,
 				0F28C10623CD0EB400D09052 /* SceneDelegate.swift in Sources */,
 				0F54AEBC23D47FDC00E3EFD8 /* GamePlaying.swift in Sources */,
+				0F54AEC823D4EC1300E3EFD8 /* CurrencyField.swift in Sources */,
 				0F54AEC223D4853D00E3EFD8 /* Bank.swift in Sources */,
 				0F6B18E923CFC33100C492A2 /* StartMoneyViewController.swift in Sources */,
 				0F28C11C23CD2BAB00D09052 /* Constants.swift in Sources */,

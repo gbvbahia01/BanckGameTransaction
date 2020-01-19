@@ -141,7 +141,7 @@
                                         <color key="textColor" name="AppLightGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-P4-Hhd">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-P4-Hhd" customClass="CurrencyField" customModule="BanckGameTransaction" customModuleProvider="target">
                                         <rect key="frame" x="10" y="61" width="374" height="50"/>
                                         <color key="backgroundColor" name="AppLightGray"/>
                                         <constraints>
@@ -768,7 +768,7 @@
                                         <color key="textColor" name="AppLightGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-Jd-iAQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-Jd-iAQ" customClass="CurrencyField" customModule="BanckGameTransaction" customModuleProvider="target">
                                         <rect key="frame" x="10" y="61" width="374" height="50"/>
                                         <color key="backgroundColor" name="AppLightGray"/>
                                         <constraints>
@@ -851,6 +851,7 @@
                     <connections>
                         <outlet property="tablePlayerWillPay" destination="f4q-cP-p6S" id="BVy-Gh-S3j"/>
                         <outlet property="tablePlayerWillReceive" destination="Rcg-8H-bA5" id="sCq-1u-vIn"/>
+                        <outlet property="transactionValueField" destination="q2R-Jd-iAQ" id="7Zy-6g-erl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXA-ld-HMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

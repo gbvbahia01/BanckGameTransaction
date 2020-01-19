@@ -15,6 +15,7 @@ class TransactionPlayerViewCell: UITableViewCell {
     @IBOutlet weak var playerName: UILabel!
     @IBOutlet weak var playerBalance: UILabel!
     @IBOutlet weak var checkBox: CheckBox!
+    @IBOutlet weak var banckImg: UIImageView!
     
     
     override func awakeFromNib() {

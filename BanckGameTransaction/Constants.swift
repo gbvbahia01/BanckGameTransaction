@@ -22,9 +22,20 @@ struct K {
         static let ALERT_TITLE_INVALID_NAME = "Nome Inválido"
         static let ALERT_MSG_INVALID_NAME = "O nome é inválido para a cor ?1"
         
+        static let ALERT_TITLE_INVALID_AMOUNT_PLAYERS = "Quantidade de Jogadores"
+        static let ALERT_MSG_INVALID_AMOUNT_PLAYERS = "São necessários no mínimo 2 jogadores"
+        
         static let ALERT_TITLE_INVALID_VALUE = "Valor Inválido"
         static let ALERT_MSG_INVALID_VALUE = "O valor inicial ?1 é inválido."
         static let ALERT_MSG_EMPTY_INVALID_VALUE = "O valor inicial deve ser informado."
+        static let ALERT_MSG_INVALID_TRANSACTION_VALUE = "O valor ?1 é inválido."
+        static let ALERT_MSG_EMPTY_INVALID_TRANSACTION_VALUE = "O valor da transação deve ser informado."
+        
+        static let ALERT_TITLE_INSUFFICIENT_FUNDS = "Saldo insuficiente"
+        static let ALERT_MSG_INSUFFICIENT_FUNDS = "Jogador ?1 não tem saldo suficiente para essa transação"
+        
+        static let ALERT_TITLE_SELECT_PLAYER = "Selecione Jogadores"
+        static let ALERT_MSG_SELECT_PLAYER = "Selecione pelo menos um jogador a pagar e um jogador a receber"
         
         static let ALERT_ACTION_OK = "Ok"
         static let ALERT_ACTION_YES = "Sim"
@@ -45,6 +56,7 @@ struct K {
         static let COLOR_ORANGE = "AppOrange"
         static let COLOR_RED = "AppRed"
         static let COLOR_BLUE = "AppBlue"
+        static let MISS_COLOR = "FF00FF"
         
         static let IMG_BANK = "bank_icon"
     }
@@ -84,5 +96,11 @@ struct K {
     struct STATUS_GAME {
         static let PLAYING = "Playing"
         static let ENDED = "Ended"
+    }
+    
+    struct LOCALE {
+        static let PT_BR = "pt_BR"
+        static let EN_US = "en_US"
+        static let FR_FR = "fr_FR"
     }
 }

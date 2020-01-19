@@ -13,6 +13,7 @@ class EndGameViewController: ViewController {
     @IBOutlet weak var winnerName: UILabel!
     @IBOutlet weak var playersResultTable: UITableView!
     
+    var game: GamePlaying?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,13 @@ class EndGameViewController: ViewController {
         playersResultTable.dataSource = self
         playersResultTable.delegate = self
      }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let player = game?.players[0] {
+            winnerName.text = player.name
+        }
+    }
     
     @IBAction func finishTapped(_ sender: UIButton) {
         print(#function)
@@ -44,7 +52,7 @@ class EndGameViewController: ViewController {
 extension EndGameViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let amount = 3;
+        let amount = self.game?.players.count ?? 0;
         
         return amount;
     }
@@ -53,10 +61,12 @@ extension EndGameViewController: UITableViewDataSource {
         
        let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANK_BALANCE_ID,
                                                 for: indexPath) as! BanckBalanceViewCell
+        if let player = game?.players[indexPath.row] {
+                cell.viewColor.backgroundColor = UIColor(hexString: player.color)
+                cell.playerNameLabel.text = player.name
+                cell.playerBalanceLabel.text = formatToCurrency(value: player.balance)
+        }
        
-       cell.viewColor.backgroundColor = UIColor(named: K.ASSETS_NAME.COLOR_LIGHT_GRAY)
-       cell.playerNameLabel.text = "Player Name"
-       cell.playerBalanceLabel.text = "2.000.000,00"
        return cell
         
     }

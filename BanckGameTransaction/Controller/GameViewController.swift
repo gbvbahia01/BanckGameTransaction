@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class GameViewController: ViewController {
     
@@ -18,6 +18,7 @@ class GameViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#function)
         
         hiddenNavigation = true
         
@@ -34,13 +35,24 @@ class GameViewController: ViewController {
         transactionPlayerTable.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        sortPlayers()
+        balancePlayerTable.reloadData()
+        transactionPlayerTable.reloadData()
+    }
+    
     //MARK: - SEGUE CALL
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(#function)
         if K.SEGUE.TO_TRANSACTION_PAGE == segue.identifier {
+            let destinatonVC = segue.destination as! TransactionViewController;
+            destinatonVC.game = game;
         }
         
         if K.SEGUE.TO_ENDGAME_PAGE == segue.identifier {
+            let destinatonVC = segue.destination as! EndGameViewController;
+            destinatonVC.game = game;
         }
     }
 
@@ -56,6 +68,14 @@ class GameViewController: ViewController {
                      sender: self)
     }
     
+    fileprivate func sortPlayers() {
+        if var players = game?.players {
+            players.sort {
+                $0.balance > $1.balance
+            }
+        }
+        
+    }
 }
 
 //MARK: - TABLE DATASOURCE
@@ -65,11 +85,11 @@ extension GameViewController: UITableViewDataSource {
         var amount = 0;
         
         if tableView.restorationIdentifier == K.TABLE_ID.BANK_BALANCE_ID {
-            amount = 6
+             amount = self.game?.players.count ?? 0;
         }
         
         if tableView.restorationIdentifier == K.TABLE_ID.BANK_TRANSACTION_ID {
-            amount = 10
+            amount = self.game?.transactions.count ?? 0;
         }
         
         return amount;
@@ -80,24 +100,35 @@ extension GameViewController: UITableViewDataSource {
         if tableView.restorationIdentifier == K.TABLE_ID.BANK_BALANCE_ID {
                    let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANK_BALANCE_ID,
                                                             for: indexPath) as! BanckBalanceViewCell
-                   
-                   cell.viewColor.backgroundColor = UIColor(named: K.ASSETS_NAME.COLOR_LIGHT_GRAY)
-                   cell.playerNameLabel.text = "Player Name"
-                   cell.playerBalanceLabel.text = "2.000.000,00"
+                    if let player = game?.players[indexPath.row] {
+                   cell.viewColor.backgroundColor = UIColor(hexString: player.color)
+                        cell.playerNameLabel.text = player.name
+                        cell.playerBalanceLabel.text = formatToCurrency(value: player.balance)
                    return cell
+            }
        }
         
         if tableView.restorationIdentifier == K.TABLE_ID.BANK_TRANSACTION_ID {
             let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANK_TRANSACTION_ID,
                                                     for: indexPath) as! BanckTransactionViewCell
-            cell.colorPlayerPaid.backgroundColor = UIColor.black
-            cell.namePlayerPaid.text = "Player Paid Name"
-            
-            cell.colorPlayerReceived.backgroundColor = UIColor.blue
-            cell.namePlayerReceived.text = "Player Received Name"
-            
-            cell.valueTransaction.text = "3.000.000,00"
-            return cell
+            if let transaction = game?.transactions[indexPath.row] {
+                if transaction.namePaid == K.GAME_TEXT.BANK_NAME {
+                    cell.colorPlayerPaid.backgroundColor = UIColor(hexString: K.ASSETS_NAME.MISS_COLOR)
+                } else {
+                    cell.colorPlayerPaid.backgroundColor = UIColor(hexString: transaction.colorPaid)
+                }
+                cell.namePlayerPaid.text = transaction.namePaid
+
+                if transaction.nameReceived == K.GAME_TEXT.BANK_NAME {
+                    cell.colorPlayerReceived.backgroundColor = UIColor(hexString: K.ASSETS_NAME.MISS_COLOR)
+                } else {
+                    cell.colorPlayerReceived.backgroundColor = UIColor(hexString: transaction.colorReceived)
+                }
+                cell.namePlayerReceived.text = transaction.nameReceived
+                
+                cell.valueTransaction.text = formatToCurrency(value: transaction.value)
+                return cell
+            }
         }
         return UITableViewCell()
     }

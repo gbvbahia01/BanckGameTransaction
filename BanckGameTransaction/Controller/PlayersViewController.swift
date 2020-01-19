@@ -58,15 +58,23 @@ class PlayersViewController: ViewController {
         game.players.removeAll()
         for pc in controll {
             if pc.sw.isOn {
-                if pc.nameLabel.text == nil || pc.nameLabel.text == "" {
+                if pc.nameLabel.text == nil || pc.nameLabel.text == "" || pc.nameLabel.text == K.GAME_TEXT.BANK_NAME {
                     nameInvalid(pc)
                     return
                 }
                 let player = Player()
-                player.color = pc.colorView.backgroundColor?.hexString ?? "FF00FF"
+                player.color = pc.colorView.backgroundColor?.hexString ?? K.ASSETS_NAME.MISS_COLOR
                 player.name = pc.nameLabel.text!
                 game.players.append(player)
             }
+        }
+        if game.players.count < 2 {
+            let alert = UIAlertController(title: K.GAME_TEXT.ALERT_TITLE_INVALID_AMOUNT_PLAYERS,
+                                          message: K.GAME_TEXT.ALERT_MSG_INVALID_AMOUNT_PLAYERS,
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: K.GAME_TEXT.ALERT_ACTION_OK, style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            return
         }
         performSegue(withIdentifier: K.SEGUE.TO_MONEY_PAGE, sender: self)
     }
