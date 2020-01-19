@@ -11,6 +11,7 @@ import UIKit
 class StartMoneyViewController: ViewController {
     
     @IBOutlet weak var playersSelectedTable: UITableView!
+    @IBOutlet weak var startMoneyField: UITextField!
     
     var game: GamePlaying?
     
@@ -27,15 +28,46 @@ class StartMoneyViewController: ViewController {
     
     //MARK: - SEGUE CALL
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(#function)
         if K.SEGUE.TO_GAME_PAGE == segue.identifier {
+            let destinatonVC = segue.destination as! GameViewController;
+            destinatonVC.game = game;
         }
     }
     
     @IBAction func startGameTapped(_ sender: UIButton) {
-        print(#function)
-        performSegue(withIdentifier: K.SEGUE.TO_GAME_PAGE,
-                     sender: self)
+        if let initialValue = startMoneyField.text {
+            let value = initialValue.replacingOccurrences(of: ".", with: "", options: .literal, range: nil)
+                                    .replacingOccurrences(of: ",", with: ".", options: .literal, range: nil)
+           if let money = Double(value) {
+                if let players = game?.players {
+                    for player in players {
+                        player.balance = money
+                    }
+                }
+            } else {
+                valueInvalid(value)
+            }
+            
+            
+        } else {
+            valueInvalid(nil)
+        }
+        
+        performSegue(withIdentifier: K.SEGUE.TO_GAME_PAGE, sender: self)
+    }
+    
+    fileprivate func valueInvalid(_ value: String?) {
+        var msg = "";
+        if value != nil && value?.isEmpty ?? false {
+            msg = K.GAME_TEXT.ALERT_MSG_INVALID_VALUE.replacingOccurrences(of: "?1", with: value!, options: .literal, range: nil)
+        } else {
+            msg = K.GAME_TEXT.ALERT_MSG_EMPTY_INVALID_VALUE
+        }
+        let alert = UIAlertController(title: K.GAME_TEXT.ALERT_TITLE_INVALID_VALUE,
+                                      message: msg,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: K.GAME_TEXT.ALERT_ACTION_OK, style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
     @IBAction func backToPlayersTapped(_ sender: UIButton) {
@@ -50,7 +82,6 @@ extension StartMoneyViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let amount = self.game?.players.count ?? 0;
-        print("Table size \(amount)")
         return amount
     }
     

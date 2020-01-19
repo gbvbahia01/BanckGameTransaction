@@ -22,6 +22,10 @@ struct K {
         static let ALERT_TITLE_INVALID_NAME = "Nome Inválido"
         static let ALERT_MSG_INVALID_NAME = "O nome é inválido para a cor ?1"
         
+        static let ALERT_TITLE_INVALID_VALUE = "Valor Inválido"
+        static let ALERT_MSG_INVALID_VALUE = "O valor inicial ?1 é inválido."
+        static let ALERT_MSG_EMPTY_INVALID_VALUE = "O valor inicial deve ser informado."
+        
         static let ALERT_ACTION_OK = "Ok"
         static let ALERT_ACTION_YES = "Sim"
         static let ALERT_ACTION_NO = "Não"

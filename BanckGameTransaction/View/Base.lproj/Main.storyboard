@@ -229,6 +229,7 @@
                     <navigationItem key="navigationItem" id="92j-4j-iWv"/>
                     <connections>
                         <outlet property="playersSelectedTable" destination="6Nw-MB-g8K" id="av9-Jd-Nco"/>
+                        <outlet property="startMoneyField" destination="Z8y-P4-Hhd" id="9Vc-sU-EPU"/>
                         <segue destination="1b5-Gt-xYH" kind="show" identifier="goToGame" id="VK5-pT-tzG"/>
                     </connections>
                 </viewController>

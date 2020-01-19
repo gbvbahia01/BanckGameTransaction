@@ -14,6 +14,8 @@ class GameViewController: ViewController {
     @IBOutlet weak var balancePlayerTable: UITableView!
     @IBOutlet weak var transactionPlayerTable: UITableView!
     
+    var game: GamePlaying?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
