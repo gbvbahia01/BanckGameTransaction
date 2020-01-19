@@ -34,24 +34,15 @@ class TransactionViewController: ViewController {
                      cellId: K.TABLE_CELL.TRANSACTION_PLAYER_ID)
     }
     
-    //MARK: - SEGUE CALL
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(#function)
-        if K.SEGUE.BACK_TRANSACTION_PAGE == segue.identifier {
-        }
-    }
-    
     @IBAction func confirmTapped(_ sender: UIButton) {
         print(#function)
-        performSegue(withIdentifier: K.SEGUE.BACK_TRANSACTION_PAGE,
-                     sender: self)
+        self.navigationController?.popViewController(animated: true)
 
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
         print(#function)
-        performSegue(withIdentifier: K.SEGUE.BACK_TRANSACTION_PAGE,
-                     sender: self)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

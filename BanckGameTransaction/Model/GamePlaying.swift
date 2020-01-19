@@ -12,7 +12,7 @@ import RealmSwift
 class GamePlaying: Object {
     
     @objc dynamic var status: String = K.STATUS_GAME.PLAYING
-    let players = List<Player>()
-    let transactions = List<Transaction>()
+    var players = List<Player>()
+    var transactions = List<Transaction>()
     
 }

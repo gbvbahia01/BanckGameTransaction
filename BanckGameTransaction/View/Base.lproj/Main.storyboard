@@ -168,8 +168,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Ll-nP-DxB">
-                                <rect key="frame" x="10" y="330" width="394" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Ll-nP-DxB" userLabel="Stack View BTs">
+                                <rect key="frame" x="10" y="300" width="394" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-Xm-Cdv">
                                         <rect key="frame" x="0.0" y="0.0" width="192" height="60"/>
@@ -178,7 +178,7 @@
                                             <color key="titleColor" name="AppLightGray"/>
                                         </state>
                                         <connections>
-                                            <segue destination="xKU-fo-LKT" kind="show" id="O87-eZ-RPk"/>
+                                            <action selector="backToPlayersTapped:" destination="Vzg-Vj-vWl" eventType="touchUpInside" id="paK-NH-HZI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZd-uV-U0F">
@@ -196,16 +196,29 @@
                                     <constraint firstAttribute="height" constant="60" id="VMX-nr-NpE"/>
                                 </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Nw-MB-g8K">
+                                <rect key="frame" x="10" y="380" width="394" height="418"/>
+                                <color key="backgroundColor" name="AppOrange"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" name="AppBlue"/>
                         <constraints>
+                            <constraint firstItem="6Nw-MB-g8K" firstAttribute="top" secondItem="3Ll-nP-DxB" secondAttribute="bottom" constant="20" id="4xL-mc-2aR"/>
                             <constraint firstItem="BIu-Qi-I4c" firstAttribute="top" secondItem="mba-96-GeU" secondAttribute="bottom" constant="10" id="5wi-Pm-ibs"/>
                             <constraint firstItem="3Ll-nP-DxB" firstAttribute="leading" secondItem="K0B-zx-dYx" secondAttribute="leading" constant="10" id="ISX-HM-GcK"/>
                             <constraint firstItem="lI3-FJ-PSG" firstAttribute="leading" secondItem="ixA-fv-xNA" secondAttribute="leading" id="KI3-RX-hba"/>
                             <constraint firstAttribute="trailing" secondItem="lI3-FJ-PSG" secondAttribute="trailing" id="LSP-k4-Qza"/>
                             <constraint firstItem="K0B-zx-dYx" firstAttribute="trailing" secondItem="BIu-Qi-I4c" secondAttribute="trailing" constant="10" id="Mfb-Cb-can"/>
-                            <constraint firstItem="3Ll-nP-DxB" firstAttribute="top" secondItem="BIu-Qi-I4c" secondAttribute="bottom" constant="50" id="VZh-WU-GBK"/>
+                            <constraint firstItem="K0B-zx-dYx" firstAttribute="trailing" secondItem="6Nw-MB-g8K" secondAttribute="trailing" constant="10" id="NSh-AB-326"/>
+                            <constraint firstItem="3Ll-nP-DxB" firstAttribute="top" secondItem="BIu-Qi-I4c" secondAttribute="bottom" constant="20" id="VZh-WU-GBK"/>
                             <constraint firstAttribute="trailing" secondItem="3Ll-nP-DxB" secondAttribute="trailing" constant="10" id="bGC-OP-Yhc"/>
+                            <constraint firstItem="6Nw-MB-g8K" firstAttribute="bottom" secondItem="K0B-zx-dYx" secondAttribute="bottom" constant="-10" id="gb3-dx-hd8"/>
+                            <constraint firstItem="6Nw-MB-g8K" firstAttribute="leading" secondItem="K0B-zx-dYx" secondAttribute="leading" constant="10" id="hZX-kJ-16l"/>
                             <constraint firstItem="mba-96-GeU" firstAttribute="top" secondItem="lI3-FJ-PSG" secondAttribute="bottom" constant="-80" id="hrV-N9-cPX"/>
                             <constraint firstItem="K0B-zx-dYx" firstAttribute="trailing" secondItem="mba-96-GeU" secondAttribute="trailing" constant="10" id="j9c-zt-km9"/>
                             <constraint firstItem="BIu-Qi-I4c" firstAttribute="leading" secondItem="K0B-zx-dYx" secondAttribute="leading" constant="10" id="n55-ao-g7g"/>
@@ -215,6 +228,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="92j-4j-iWv"/>
                     <connections>
+                        <outlet property="playersSelectedTable" destination="6Nw-MB-g8K" id="av9-Jd-Nco"/>
                         <segue destination="1b5-Gt-xYH" kind="show" identifier="goToGame" id="VK5-pT-tzG"/>
                     </connections>
                 </viewController>
@@ -291,7 +305,7 @@
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-mi-kZd">
                                                 <rect key="frame" x="345" y="1.5" width="51" height="31"/>
@@ -336,7 +350,7 @@
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-sN-RUG">
                                                 <rect key="frame" x="345" y="1.5" width="51" height="31"/>
@@ -382,7 +396,7 @@
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zbQ-mR-CzZ">
                                                 <rect key="frame" x="345" y="1.5" width="51" height="31"/>
@@ -429,7 +443,7 @@
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7il-Ko-a9g">
                                                 <rect key="frame" x="345" y="1.5" width="51" height="31"/>
@@ -477,7 +491,7 @@
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jFt-gr-Yl0">
                                                 <rect key="frame" x="345" y="1.5" width="51" height="31"/>
@@ -526,7 +540,7 @@
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hhq-wA-vJH">
                                                 <rect key="frame" x="345" y="1.5" width="51" height="31"/>
@@ -609,6 +623,24 @@
                     </view>
                     <navigationItem key="navigationItem" id="hxf-A0-tuW"/>
                     <connections>
+                        <outlet property="blackColorView" destination="YiT-2A-pD6" id="Wkb-Gh-XMC"/>
+                        <outlet property="blackNameLabel" destination="diO-bZ-p6L" id="DF8-tj-51n"/>
+                        <outlet property="blackSwitch" destination="yKe-mi-kZd" id="41d-Q4-eft"/>
+                        <outlet property="blueColorView" destination="V4C-pd-tGa" id="z5k-cc-xCy"/>
+                        <outlet property="blueNameLabel" destination="C9g-hf-c4W" id="oWL-nx-HFL"/>
+                        <outlet property="blueSwitch" destination="Fk0-sN-RUG" id="2zd-IW-buI"/>
+                        <outlet property="greenColorView" destination="wxd-RW-Drc" id="nkK-x7-Fbm"/>
+                        <outlet property="greenNameLabel" destination="zUH-8Y-Ah3" id="QIi-dd-ERH"/>
+                        <outlet property="greenSwitch" destination="Hhq-wA-vJH" id="TcF-q2-guM"/>
+                        <outlet property="redColorView" destination="hOO-p5-U4k" id="grL-9r-t9f"/>
+                        <outlet property="redNameLabel" destination="UiA-gU-3JW" id="4Io-sJ-K9a"/>
+                        <outlet property="redSwitch" destination="zbQ-mR-CzZ" id="hfa-Yl-PuI"/>
+                        <outlet property="whiteColorView" destination="BP4-Y5-cyb" id="flp-nr-dsO"/>
+                        <outlet property="whiteNameLabel" destination="ZzC-cG-gHs" id="kiK-q9-feo"/>
+                        <outlet property="whiteSwitch" destination="jFt-gr-Yl0" id="ywX-Nt-Cj1"/>
+                        <outlet property="yellowColorView" destination="jGg-t0-GA9" id="xah-Nf-BDa"/>
+                        <outlet property="yellowNameLabel" destination="PMI-lb-vI7" id="CrZ-T3-Aqo"/>
+                        <outlet property="yellowSwitch" destination="7il-Ko-a9g" id="5Aj-E2-Mkt"/>
                         <segue destination="Vzg-Vj-vWl" kind="show" identifier="toStartMoneyPage" id="6Hd-Ef-flM"/>
                     </connections>
                 </viewController>
@@ -818,7 +850,6 @@
                     <connections>
                         <outlet property="tablePlayerWillPay" destination="f4q-cP-p6S" id="BVy-Gh-S3j"/>
                         <outlet property="tablePlayerWillReceive" destination="Rcg-8H-bA5" id="sCq-1u-vIn"/>
-                        <segue destination="1b5-Gt-xYH" kind="show" identifier="backToTransaction" id="5C9-fJ-hx9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXA-ld-HMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -974,9 +1005,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Hd-Ef-flM"/>
         <segue reference="VK5-pT-tzG"/>
-        <segue reference="O87-eZ-RPk"/>
         <segue reference="CC8-jQ-t6L"/>
     </inferredMetricsTieBreakers>
 </document>
