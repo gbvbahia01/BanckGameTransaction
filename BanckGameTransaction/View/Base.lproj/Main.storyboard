@@ -286,7 +286,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" background="I" translatesAutoresizingMaskIntoConstraints="NO" id="diO-bZ-p6L">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diO-bZ-p6L">
                                                 <rect key="frame" x="35" y="0.0" width="305" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
@@ -331,7 +331,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" background="I" translatesAutoresizingMaskIntoConstraints="NO" id="C9g-hf-c4W">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9g-hf-c4W">
                                                 <rect key="frame" x="35" y="0.0" width="305" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
@@ -377,7 +377,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" background="I" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-gU-3JW">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-gU-3JW">
                                                 <rect key="frame" x="35" y="0.0" width="305" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
@@ -424,7 +424,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" background="I" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-lb-vI7">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-lb-vI7">
                                                 <rect key="frame" x="35" y="0.0" width="305" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
@@ -472,7 +472,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" background="I" translatesAutoresizingMaskIntoConstraints="NO" id="ZzC-cG-gHs">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZzC-cG-gHs">
                                                 <rect key="frame" x="35" y="0.0" width="305" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
@@ -521,7 +521,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" background="I" translatesAutoresizingMaskIntoConstraints="NO" id="zUH-8Y-Ah3">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUH-8Y-Ah3">
                                                 <rect key="frame" x="35" y="0.0" width="305" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
@@ -950,7 +950,6 @@
     </scenes>
     <resources>
         <image name="ButtonRec" width="1370.5" height="363"/>
-        <image name="I" width="16" height="16"/>
         <image name="MoneyPlayers" width="37.5" height="37.5"/>
         <image name="Payment" width="64" height="64"/>
         <image name="Players" width="37.5" height="37.5"/>
