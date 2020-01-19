@@ -47,8 +47,6 @@ class StartMoneyViewController: ViewController {
             } else {
                 valueInvalid(value)
             }
-            
-            
         } else {
             valueInvalid(nil)
         }
