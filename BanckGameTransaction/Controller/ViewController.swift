@@ -28,5 +28,11 @@ class ViewController: UIViewController {
         
     }
     
+    func registerCell(with table: UITableView,
+                      nibFile nib: String,
+                      cellId id: String) {
+        table.register(UINib(nibName: nib,  bundle: nil),
+                       forCellReuseIdentifier: id)
+    }
 
 }

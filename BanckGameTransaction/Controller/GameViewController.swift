@@ -19,15 +19,15 @@ class GameViewController: ViewController {
         
         hiddenNavigation = true
         
-        balancePlayerTable.register(UINib(nibName: K.TABLE_CELL.BANCK_BALANCE_NIB,
-                                          bundle: nil),
-                                    forCellReuseIdentifier: K.TABLE_CELL.BANCK_BALANCE_ID)
+        registerCell(with: balancePlayerTable,
+                     nibFile: K.TABLE_CELL.BANCK_BALANCE_NIB,
+                     cellId: K.TABLE_CELL.BANCK_BALANCE_ID)
         balancePlayerTable.dataSource = self
         balancePlayerTable.delegate = self
         
-        transactionPlayerTable.register(UINib(nibName: K.TABLE_CELL.BANCK_TRANSACTION_NIB,
-                                          bundle: nil),
-                                    forCellReuseIdentifier: K.TABLE_CELL.BANCK_TRANSACTION_ID)
+        registerCell(with: transactionPlayerTable,
+                     nibFile: K.TABLE_CELL.BANCK_TRANSACTION_NIB,
+                     cellId: K.TABLE_CELL.BANCK_TRANSACTION_ID)
         transactionPlayerTable.dataSource = self
         transactionPlayerTable.delegate = self
     }
@@ -36,13 +36,21 @@ class GameViewController: ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(#function)
         if K.SEGUE.TO_TRANSACTION_PAGE == segue.identifier {
-            // TODO check if at least two players were selected
+        }
+        
+        if K.SEGUE.TO_ENDGAME_PAGE == segue.identifier {
         }
     }
-    //startGameTapped
+
     @IBAction func transactionTapped(_ sender: UIButton) {
         print(#function)
         performSegue(withIdentifier: K.SEGUE.TO_TRANSACTION_PAGE,
+                     sender: self)
+    }
+    
+    @IBAction func endGameTapped(_ sender: UIButton) {
+        print(#function)
+        performSegue(withIdentifier: K.SEGUE.TO_ENDGAME_PAGE,
                      sender: self)
     }
     

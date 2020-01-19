@@ -21,6 +21,10 @@
 		0F6B18EF23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */; };
 		0F8B1C4023D395E1007CDFDC /* BanckTransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B1C3E23D395E1007CDFDC /* BanckTransactionViewCell.swift */; };
 		0F8B1C4123D395E1007CDFDC /* BanckTransactionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8B1C3F23D395E1007CDFDC /* BanckTransactionViewCell.xib */; };
+		0F8B1C4323D3A94B007CDFDC /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B1C4223D3A94B007CDFDC /* TransactionViewController.swift */; };
+		0F8B1C4523D3A9FA007CDFDC /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B1C4423D3A9FA007CDFDC /* EndGameViewController.swift */; };
+		0F8B1C4823D3C55E007CDFDC /* TransactionPlayerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B1C4623D3C55E007CDFDC /* TransactionPlayerViewCell.swift */; };
+		0F8B1C4923D3C55E007CDFDC /* TransactionPlayerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8B1C4723D3C55E007CDFDC /* TransactionPlayerViewCell.xib */; };
 		0FAFD46223D30A3E00243100 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFD46123D30A3E00243100 /* GameViewController.swift */; };
 		0FAFD46623D328D800243100 /* BanckBalanceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFD46423D328D800243100 /* BanckBalanceViewCell.swift */; };
 		0FAFD46723D328D800243100 /* BanckBalanceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAFD46523D328D800243100 /* BanckBalanceViewCell.xib */; };
@@ -44,6 +48,10 @@
 		0F6B18EE23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtNSLayoutConstraint.swift; sourceTree = "<group>"; };
 		0F8B1C3E23D395E1007CDFDC /* BanckTransactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanckTransactionViewCell.swift; sourceTree = "<group>"; };
 		0F8B1C3F23D395E1007CDFDC /* BanckTransactionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanckTransactionViewCell.xib; sourceTree = "<group>"; };
+		0F8B1C4223D3A94B007CDFDC /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		0F8B1C4423D3A9FA007CDFDC /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		0F8B1C4623D3C55E007CDFDC /* TransactionPlayerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPlayerViewCell.swift; sourceTree = "<group>"; };
+		0F8B1C4723D3C55E007CDFDC /* TransactionPlayerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionPlayerViewCell.xib; sourceTree = "<group>"; };
 		0FAFD46123D30A3E00243100 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		0FAFD46423D328D800243100 /* BanckBalanceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanckBalanceViewCell.swift; sourceTree = "<group>"; };
 		0FAFD46523D328D800243100 /* BanckBalanceViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanckBalanceViewCell.xib; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 				0FAFD46523D328D800243100 /* BanckBalanceViewCell.xib */,
 				0F8B1C3E23D395E1007CDFDC /* BanckTransactionViewCell.swift */,
 				0F8B1C3F23D395E1007CDFDC /* BanckTransactionViewCell.xib */,
+				0F8B1C4623D3C55E007CDFDC /* TransactionPlayerViewCell.swift */,
+				0F8B1C4723D3C55E007CDFDC /* TransactionPlayerViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 				0F28C11F23CD2FA800D09052 /* PlayersViewController.swift */,
 				0F6B18E823CFC33100C492A2 /* StartMoneyViewController.swift */,
 				0FAFD46123D30A3E00243100 /* GameViewController.swift */,
+				0F8B1C4223D3A94B007CDFDC /* TransactionViewController.swift */,
+				0F8B1C4423D3A9FA007CDFDC /* EndGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +223,7 @@
 				0F28C11023CD0EB700D09052 /* LaunchScreen.storyboard in Resources */,
 				0F28C10D23CD0EB700D09052 /* Assets.xcassets in Resources */,
 				0F28C11823CD12D300D09052 /* README.md in Resources */,
+				0F8B1C4923D3C55E007CDFDC /* TransactionPlayerViewCell.xib in Resources */,
 				0FAFD46723D328D800243100 /* BanckBalanceViewCell.xib in Resources */,
 				0F28C10B23CD0EB400D09052 /* Main.storyboard in Resources */,
 				0F8B1C4123D395E1007CDFDC /* BanckTransactionViewCell.xib in Resources */,
@@ -267,15 +280,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F28C11E23CD2E0B00D09052 /* ViewController.swift in Sources */,
+				0F8B1C4523D3A9FA007CDFDC /* EndGameViewController.swift in Sources */,
 				0FAFD46623D328D800243100 /* BanckBalanceViewCell.swift in Sources */,
 				0F28C10823CD0EB400D09052 /* StartAppViewController.swift in Sources */,
 				0F8B1C4023D395E1007CDFDC /* BanckTransactionViewCell.swift in Sources */,
 				0F28C10423CD0EB400D09052 /* AppDelegate.swift in Sources */,
 				0F6B18EF23CFDFEE00C492A2 /* ExtNSLayoutConstraint.swift in Sources */,
 				0FAFD46223D30A3E00243100 /* GameViewController.swift in Sources */,
+				0F8B1C4323D3A94B007CDFDC /* TransactionViewController.swift in Sources */,
 				0F28C10623CD0EB400D09052 /* SceneDelegate.swift in Sources */,
 				0F6B18E923CFC33100C492A2 /* StartMoneyViewController.swift in Sources */,
 				0F28C11C23CD2BAB00D09052 /* Constants.swift in Sources */,
+				0F8B1C4823D3C55E007CDFDC /* TransactionPlayerViewCell.swift in Sources */,
 				0F28C12023CD2FA800D09052 /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

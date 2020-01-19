@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellTransactionPlayer" id="KGk-i7-Jjw" customClass="TransactionPlayerViewCell" customModule="BanckGameTransaction" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6b0-66-hvL">
+                        <rect key="frame" x="10" y="9" width="26" height="26"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="BZG-BB-ZyQ"/>
+                            <constraint firstAttribute="height" constant="26" id="Ocs-bj-p0N"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="13"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s9V-PI-tfN">
+                        <rect key="frame" x="46" y="5" width="87" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icw-bI-O0m">
+                                <rect key="frame" x="0.0" y="0.0" width="87" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="AppLightGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.000.000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y3-TX-2zD">
+                                <rect key="frame" x="0.0" y="17" width="87" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="AppLightGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RjM-eN-u7F" customClass="CheckBox" customModule="CheckBox">
+                        <rect key="frame" x="274" y="4" width="36" height="36"/>
+                        <color key="backgroundColor" name="AppOrange"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="2Di-MW-nZd"/>
+                            <constraint firstAttribute="width" constant="36" id="ac4-if-eQa"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                <color key="value" name="AppBlue"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unSelectedColor">
+                                <color key="value" name="AppRed"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="dimensions">
+                                <integer key="value" value="26"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="markColor">
+                                <color key="value" name="AppLightGray"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="AppOrange"/>
+                <constraints>
+                    <constraint firstItem="s9V-PI-tfN" firstAttribute="leading" secondItem="6b0-66-hvL" secondAttribute="trailing" constant="10" id="5HJ-Pz-eQP"/>
+                    <constraint firstItem="6b0-66-hvL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PpB-Bx-wK7"/>
+                    <constraint firstItem="RjM-eN-u7F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wzb-o0-VgL"/>
+                    <constraint firstAttribute="trailing" secondItem="RjM-eN-u7F" secondAttribute="trailing" constant="10" id="ZOK-0L-RHi"/>
+                    <constraint firstItem="s9V-PI-tfN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="e3t-af-MJO"/>
+                    <constraint firstItem="6b0-66-hvL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hTU-8U-aI6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkBox" destination="RjM-eN-u7F" id="neG-l2-9MJ"/>
+                <outlet property="playerBalance" destination="8Y3-TX-2zD" id="bsY-0b-RhR"/>
+                <outlet property="playerColor" destination="6b0-66-hvL" id="5y5-bY-FZc"/>
+                <outlet property="playerName" destination="Icw-bI-O0m" id="nt2-JP-r7N"/>
+            </connections>
+            <point key="canvasLocation" x="103" y="125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBlue">
+            <color red="0.37299999594688416" green="0.42399999499320984" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppLightGray">
+            <color red="0.92900002002716064" green="0.96899998188018799" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppOrange">
+            <color red="1" green="0.71399998664855957" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppRed">
+            <color red="1" green="0.51399999856948853" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

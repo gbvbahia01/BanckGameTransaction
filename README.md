@@ -10,7 +10,7 @@ App Colors{
   Red: FF8364
 }
 
-Players COlors:= {
+Players Colors:= {
   Black: 000000
   Red: FF0000
   Blue: 0000FF

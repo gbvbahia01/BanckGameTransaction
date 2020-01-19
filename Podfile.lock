@@ -1,4 +1,5 @@
 PODS:
+  - CheckBox (1.0.0)
   - IQKeyboardManagerSwift (6.5.4)
   - Realm (4.3.0):
     - Realm/Headers (= 4.3.0)
@@ -7,20 +8,23 @@ PODS:
     - Realm (= 4.3.0)
 
 DEPENDENCIES:
+  - CheckBox
   - IQKeyboardManagerSwift
   - RealmSwift
 
 SPEC REPOS:
   trunk:
+    - CheckBox
     - IQKeyboardManagerSwift
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  CheckBox: c6f39d7dd72be096896205584b5943e4743a767b
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   Realm: 9357c3589555793e1860a7104a7412bca4a48d99
   RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
 
-PODFILE CHECKSUM: c8e774f4a7768215cac341af444602724ebf0537
+PODFILE CHECKSUM: 33a0ffde9c2ce6a726c9bdb9518a8427b73be98f
 
 COCOAPODS: 1.8.4

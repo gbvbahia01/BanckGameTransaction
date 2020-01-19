@@ -8,5 +8,6 @@ target 'BanckGameTransaction' do
   # Pods for BanckGameTransaction
   pod 'RealmSwift'
   pod 'IQKeyboardManagerSwift'
+  pod 'CheckBox'
   
 end
