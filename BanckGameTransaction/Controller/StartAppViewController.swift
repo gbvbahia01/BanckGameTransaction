@@ -10,9 +10,12 @@ import UIKit
 
 class StartAppViewController: ViewController {
     
+    var gamePlayng: GamePlaying?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hiddenNavigation = true
+        gamePlayng = GamePlaying()
     }
     
     //MARK: - SEGUE CALL

@@ -23,10 +23,12 @@ class PlayersViewController: ViewController {
         }
     }
     
+    
     @IBAction func startValueTapped(_ sender: UIButton) {
         print(#function)
-        performSegue(withIdentifier: K.SEGUE.TO_MONEY_PAGE,
-                     sender: self)
+                performSegue(withIdentifier: K.SEGUE.TO_MONEY_PAGE,
+                             sender: self)
     }
-    
+   
+   
 }

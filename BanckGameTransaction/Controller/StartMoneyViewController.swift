@@ -12,7 +12,7 @@ class StartMoneyViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hiddenNavigation = false
+        hiddenNavigation = true
     }
     
     //MARK: - SEGUE CALL
@@ -23,10 +23,12 @@ class StartMoneyViewController: ViewController {
         }
     }
     
+    
     @IBAction func startGameTapped(_ sender: UIButton) {
         print(#function)
         performSegue(withIdentifier: K.SEGUE.TO_GAME_PAGE,
                      sender: self)
     }
+    
     
 }

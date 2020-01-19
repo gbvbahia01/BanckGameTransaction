@@ -20,14 +20,14 @@ class GameViewController: ViewController {
         hiddenNavigation = true
         
         registerCell(with: balancePlayerTable,
-                     nibFile: K.TABLE_CELL.BANCK_BALANCE_NIB,
-                     cellId: K.TABLE_CELL.BANCK_BALANCE_ID)
+                     nibFile: K.TABLE_CELL.BANK_BALANCE_NIB,
+                     cellId: K.TABLE_CELL.BANK_BALANCE_ID)
         balancePlayerTable.dataSource = self
         balancePlayerTable.delegate = self
         
         registerCell(with: transactionPlayerTable,
-                     nibFile: K.TABLE_CELL.BANCK_TRANSACTION_NIB,
-                     cellId: K.TABLE_CELL.BANCK_TRANSACTION_ID)
+                     nibFile: K.TABLE_CELL.BANK_TRANSACTION_NIB,
+                     cellId: K.TABLE_CELL.BANK_TRANSACTION_ID)
         transactionPlayerTable.dataSource = self
         transactionPlayerTable.delegate = self
     }
@@ -62,11 +62,11 @@ extension GameViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var amount = 0;
         
-        if tableView.restorationIdentifier == K.TABLE_ID.BANCK_BALANCE_ID {
+        if tableView.restorationIdentifier == K.TABLE_ID.BANK_BALANCE_ID {
             amount = 6
         }
         
-        if tableView.restorationIdentifier == K.TABLE_ID.BANCK_TRANSACTION_ID {
+        if tableView.restorationIdentifier == K.TABLE_ID.BANK_TRANSACTION_ID {
             amount = 10
         }
         
@@ -75,8 +75,8 @@ extension GameViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if tableView.restorationIdentifier == K.TABLE_ID.BANCK_BALANCE_ID {
-                   let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANCK_BALANCE_ID,
+        if tableView.restorationIdentifier == K.TABLE_ID.BANK_BALANCE_ID {
+                   let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANK_BALANCE_ID,
                                                             for: indexPath) as! BanckBalanceViewCell
                    
                    cell.viewColor.backgroundColor = UIColor(named: K.ASSETS_NAME.COLOR_LIGHT_GRAY)
@@ -85,8 +85,8 @@ extension GameViewController: UITableViewDataSource {
                    return cell
        }
         
-        if tableView.restorationIdentifier == K.TABLE_ID.BANCK_TRANSACTION_ID {
-            let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANCK_TRANSACTION_ID,
+        if tableView.restorationIdentifier == K.TABLE_ID.BANK_TRANSACTION_ID {
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANK_TRANSACTION_ID,
                                                     for: indexPath) as! BanckTransactionViewCell
             cell.colorPlayerPaid.backgroundColor = UIColor.black
             cell.namePlayerPaid.text = "Player Paid Name"
@@ -107,11 +107,11 @@ extension GameViewController: UITableViewDataSource {
 extension GameViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-         if tableView.restorationIdentifier == K.TABLE_ID.BANCK_BALANCE_ID {
+         if tableView.restorationIdentifier == K.TABLE_ID.BANK_BALANCE_ID {
             return K.GAME_TEXT.TABLE_HEADER_BALANCE
         }
         
-        if tableView.restorationIdentifier == K.TABLE_ID.BANCK_TRANSACTION_ID {
+        if tableView.restorationIdentifier == K.TABLE_ID.BANK_TRANSACTION_ID {
             return K.GAME_TEXT.TABLE_HEADER_TRANSACTIONS
         }
         

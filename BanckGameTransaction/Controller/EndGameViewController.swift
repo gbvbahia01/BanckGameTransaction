@@ -20,8 +20,8 @@ class EndGameViewController: ViewController {
         hiddenNavigation = true
         
         registerCell(with: playersResultTable,
-                     nibFile: K.TABLE_CELL.BANCK_BALANCE_NIB,
-                     cellId: K.TABLE_CELL.BANCK_BALANCE_ID)
+                     nibFile: K.TABLE_CELL.BANK_BALANCE_NIB,
+                     cellId: K.TABLE_CELL.BANK_BALANCE_ID)
         playersResultTable.dataSource = self
         playersResultTable.delegate = self
      }
@@ -51,7 +51,7 @@ extension EndGameViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-       let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANCK_BALANCE_ID,
+       let cell = tableView.dequeueReusableCell(withIdentifier: K.TABLE_CELL.BANK_BALANCE_ID,
                                                 for: indexPath) as! BanckBalanceViewCell
        
        cell.viewColor.backgroundColor = UIColor(named: K.ASSETS_NAME.COLOR_LIGHT_GRAY)
