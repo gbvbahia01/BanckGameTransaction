@@ -113,16 +113,22 @@ extension GameViewController: UITableViewDataSource {
                                                     for: indexPath) as! BanckTransactionViewCell
             if let transaction = game?.transactions[indexPath.row] {
                 if transaction.namePaid == K.GAME_TEXT.BANK_NAME {
-                    cell.colorPlayerPaid.backgroundColor = UIColor(hexString: K.ASSETS_NAME.MISS_COLOR)
+                    cell.colorPlayerPaid.backgroundColor = UIColor(named: K.ASSETS_NAME.COLOR_0)
+                    cell.bankImgPaid.isHidden = false
                 } else {
                     cell.colorPlayerPaid.backgroundColor = UIColor(hexString: transaction.colorPaid)
+                    cell.colorPlayerPaid.isHidden = false
+                    cell.bankImgPaid.isHidden = true
                 }
                 cell.namePlayerPaid.text = transaction.namePaid
 
                 if transaction.nameReceived == K.GAME_TEXT.BANK_NAME {
-                    cell.colorPlayerReceived.backgroundColor = UIColor(hexString: K.ASSETS_NAME.MISS_COLOR)
+                    cell.colorPlayerReceived.backgroundColor = UIColor(named: K.ASSETS_NAME.COLOR_0)
+                    cell.banckImgReceived.isHidden = false
                 } else {
                     cell.colorPlayerReceived.backgroundColor = UIColor(hexString: transaction.colorReceived)
+                    cell.colorPlayerReceived.isHidden = false
+                    cell.banckImgReceived.isHidden = true
                 }
                 cell.namePlayerReceived.text = transaction.nameReceived
                 

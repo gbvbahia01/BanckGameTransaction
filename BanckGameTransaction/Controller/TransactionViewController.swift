@@ -170,6 +170,8 @@ extension TransactionViewController: UITableViewDataSource {
             cell.playerName.text = player.name
             cell.playerBalance.text = formatToCurrency(value: player.balance)
             cell.checkBox.isChecked = false
+            cell.playerColor.isHidden = false
+            cell.banckImg.isHidden = true
         }
         
         return cell

@@ -19,6 +19,8 @@ class BanckTransactionViewCell: UITableViewCell {
     
     @IBOutlet weak var valueTransaction: UILabel!
     
+    @IBOutlet weak var bankImgPaid: UIImageView!
+    @IBOutlet weak var banckImgReceived: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

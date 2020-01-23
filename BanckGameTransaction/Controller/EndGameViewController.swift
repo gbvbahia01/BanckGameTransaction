@@ -66,7 +66,7 @@ extension EndGameViewController: UITableViewDataSource {
                 cell.playerNameLabel.text = player.name
                 cell.playerBalanceLabel.text = formatToCurrency(value: player.balance)
         }
-       
+        
        return cell
         
     }

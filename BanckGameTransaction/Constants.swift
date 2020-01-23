@@ -49,6 +49,7 @@ struct K {
         static let COLOR_NAME_GREEN = "Verde"
         static let COLOR_NAME_WHITE = "Branco"
         static let COLOR_NAME_RED = "Vermelho"
+        
     }
     
     struct ASSETS_NAME {
@@ -57,6 +58,7 @@ struct K {
         static let COLOR_RED = "AppRed"
         static let COLOR_BLUE = "AppBlue"
         static let MISS_COLOR = "FF00FF"
+        static let COLOR_0 = "Transparent"
         
         static let IMG_BANK = "bank_icon"
     }

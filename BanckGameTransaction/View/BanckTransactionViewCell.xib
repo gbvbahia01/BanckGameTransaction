@@ -40,6 +40,12 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KB2-PL-f5v">
                                         <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bank_icon" translatesAutoresizingMaskIntoConstraints="NO" id="uys-fI-WVb">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="SQt-V9-Q2Y"/>
@@ -64,6 +70,12 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fop-lS-LhC">
                                         <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bank_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IfV-O5-nZb">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="8ir-DF-mgx"/>
@@ -108,6 +120,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="banckImgReceived" destination="IfV-O5-nZb" id="TJW-M6-I9h"/>
+                <outlet property="bankImgPaid" destination="uys-fI-WVb" id="5eV-Sl-h86"/>
                 <outlet property="colorPlayerPaid" destination="KB2-PL-f5v" id="6VV-Uz-88D"/>
                 <outlet property="colorPlayerReceived" destination="Fop-lS-LhC" id="BIq-wG-BcP"/>
                 <outlet property="namePlayerPaid" destination="URc-ul-g6N" id="1Gi-dN-aoM"/>
@@ -118,6 +132,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="bank_icon" width="16" height="16"/>
         <namedColor name="AppLightGray">
             <color red="0.92900002002716064" green="0.96899998188018799" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
