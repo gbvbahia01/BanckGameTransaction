@@ -658,7 +658,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablePlayerBalanceID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W7R-K4-KIB">
-                                <rect key="frame" x="10" y="0.0" width="394" height="269.5"/>
+                                <rect key="frame" x="10" y="0.0" width="394" height="311"/>
                                 <color key="backgroundColor" name="AppOrange"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -667,7 +667,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablePlayerTransactionID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kG2-fl-2gm">
-                                <rect key="frame" x="10" y="419.5" width="394" height="378.5"/>
+                                <rect key="frame" x="10" y="391" width="394" height="407"/>
                                 <color key="backgroundColor" name="AppOrange"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -675,48 +675,52 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-sb-HFs">
-                                <rect key="frame" x="20" y="279.5" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Z2m-6u-eM5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Realizar Pagamento" image="bt_pay" backgroundImage="RedRec">
-                                    <color key="titleColor" name="AppLightGray"/>
-                                </state>
-                                <connections>
-                                    <action selector="transactionTapped:" destination="1b5-Gt-xYH" eventType="touchUpInside" id="dGe-he-l3h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-rK-nE3">
-                                <rect key="frame" x="20" y="349.5" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ARJ-ue-QCg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Finalizar Jogo" image="bt_end" backgroundImage="RedRec">
-                                    <color key="titleColor" name="AppLightGray"/>
-                                </state>
-                                <connections>
-                                    <action selector="endGameTapped:" destination="1b5-Gt-xYH" eventType="touchUpInside" id="OwU-Lu-4Yw"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sar-Qw-WaB" userLabel="Stack View BTs">
+                                <rect key="frame" x="10" y="321" width="394" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-sb-HFs">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0Ko-Fq-vRD"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="zMD-Ab-ise"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Realizar Pagamento" image="bt_pay" backgroundImage="RedRec">
+                                            <color key="titleColor" name="AppLightGray"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="transactionTapped:" destination="1b5-Gt-xYH" eventType="touchUpInside" id="dGe-he-l3h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-rK-nE3">
+                                        <rect key="frame" x="202" y="0.0" width="192" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="AXh-3E-exA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="HVg-Oe-CKN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Finalizar Jogo" image="bt_end" backgroundImage="RedRec">
+                                            <color key="titleColor" name="AppLightGray"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endGameTapped:" destination="1b5-Gt-xYH" eventType="touchUpInside" id="OwU-Lu-4Yw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="AppBlue"/>
                         <constraints>
-                            <constraint firstItem="6z2-U0-3vS" firstAttribute="trailing" secondItem="y8p-rK-nE3" secondAttribute="trailing" constant="20" id="4dP-xp-UTZ"/>
                             <constraint firstItem="W7R-K4-KIB" firstAttribute="top" secondItem="6z2-U0-3vS" secondAttribute="top" id="80S-Xp-uut"/>
-                            <constraint firstItem="y8p-rK-nE3" firstAttribute="leading" secondItem="6z2-U0-3vS" secondAttribute="leading" constant="20" id="BNM-Ae-DBH"/>
-                            <constraint firstItem="6z2-U0-3vS" firstAttribute="bottom" secondItem="W7R-K4-KIB" secondAttribute="bottom" multiplier="3" id="LxT-e7-bZn"/>
-                            <constraint firstItem="y8p-rK-nE3" firstAttribute="top" secondItem="WPh-sb-HFs" secondAttribute="bottom" constant="10" id="OEh-2u-Alg"/>
+                            <constraint firstItem="6z2-U0-3vS" firstAttribute="bottom" secondItem="W7R-K4-KIB" secondAttribute="bottom" multiplier="2.6" id="LxT-e7-bZn"/>
                             <constraint firstItem="kG2-fl-2gm" firstAttribute="leading" secondItem="6z2-U0-3vS" secondAttribute="leading" constant="10" id="Pwx-gk-4R3"/>
-                            <constraint firstItem="WPh-sb-HFs" firstAttribute="leading" secondItem="zVU-75-7rC" secondAttribute="leading" constant="20" id="iSd-Fr-509"/>
+                            <constraint firstAttribute="trailing" secondItem="Sar-Qw-WaB" secondAttribute="trailing" constant="10" id="U29-Fs-iTU"/>
+                            <constraint firstItem="kG2-fl-2gm" firstAttribute="top" secondItem="W7R-K4-KIB" secondAttribute="bottom" constant="80" id="c9Q-AD-S0j"/>
                             <constraint firstItem="6z2-U0-3vS" firstAttribute="trailing" secondItem="kG2-fl-2gm" secondAttribute="trailing" constant="10" id="lO2-k8-OOp"/>
                             <constraint firstItem="kG2-fl-2gm" firstAttribute="bottom" secondItem="6z2-U0-3vS" secondAttribute="bottom" constant="-10" id="oId-8x-3lc"/>
-                            <constraint firstAttribute="trailing" secondItem="WPh-sb-HFs" secondAttribute="trailing" constant="20" id="rAw-Z5-a9X"/>
                             <constraint firstItem="6z2-U0-3vS" firstAttribute="trailing" secondItem="W7R-K4-KIB" secondAttribute="trailing" constant="10" id="rHE-vM-hcH"/>
-                            <constraint firstItem="WPh-sb-HFs" firstAttribute="top" secondItem="W7R-K4-KIB" secondAttribute="bottom" constant="10" id="wAH-Ci-7rS"/>
-                            <constraint firstItem="kG2-fl-2gm" firstAttribute="top" secondItem="y8p-rK-nE3" secondAttribute="bottom" constant="10" id="wIr-ge-uOH"/>
+                            <constraint firstItem="Sar-Qw-WaB" firstAttribute="leading" secondItem="6z2-U0-3vS" secondAttribute="leading" constant="10" id="tUz-DR-r8X"/>
+                            <constraint firstItem="kG2-fl-2gm" firstAttribute="top" secondItem="Sar-Qw-WaB" secondAttribute="bottom" constant="10" id="uqp-GQ-kMB"/>
                             <constraint firstItem="W7R-K4-KIB" firstAttribute="leading" secondItem="6z2-U0-3vS" secondAttribute="leading" constant="10" id="wXB-kd-QUg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6z2-U0-3vS"/>
@@ -1007,7 +1011,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VK5-pT-tzG"/>
+        <segue reference="k1q-44-R6U"/>
         <segue reference="CC8-jQ-t6L"/>
     </inferredMetricsTieBreakers>
 </document>
