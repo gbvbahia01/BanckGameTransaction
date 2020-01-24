@@ -57,15 +57,31 @@ class GameViewController: ViewController {
     }
 
     @IBAction func transactionTapped(_ sender: UIButton) {
-        print(#function)
+        //print(#function)
         performSegue(withIdentifier: K.SEGUE.TO_TRANSACTION_PAGE,
                      sender: self)
     }
     
     @IBAction func endGameTapped(_ sender: UIButton) {
-        print(#function)
-        performSegue(withIdentifier: K.SEGUE.TO_ENDGAME_PAGE,
-                     sender: self)
+        //print(#function)
+        
+        let alert = UIAlertController(title: K.GAME_TEXT.ALERT_ACTION_END_GAME_ALERT_TITLE,
+                                      message: K.GAME_TEXT.ALERT_ACTION_END_GAME_ALERT_MSG,
+                                      preferredStyle: .alert)
+        let clearAction = UIAlertAction(title: K.GAME_TEXT.ALERT_ACTION_YES,
+                                        style: .destructive) { (alert: UIAlertAction!) -> Void in
+                                        self.performSegue(withIdentifier: K.SEGUE.TO_ENDGAME_PAGE,
+                                                          sender: self)
+                                        }
+        let cancelAction = UIAlertAction(title: K.GAME_TEXT.ALERT_ACTION_CANCEL,
+                                         style: .default) { (alert: UIAlertAction!) -> Void in }
+               
+        alert.addAction(clearAction)
+        alert.addAction(cancelAction)
+               
+        present(alert, animated: true, completion:nil)
+        
+        
     }
     
     fileprivate func sortPlayers() {

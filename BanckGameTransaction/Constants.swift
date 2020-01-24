@@ -42,6 +42,8 @@ struct K {
         static let ALERT_ACTION_NO = "Não"
         static let ALERT_ACTION_CANCEL = "Cancelar"
         
+        static let ALERT_ACTION_END_GAME_ALERT_TITLE = "Terminar Jogo"
+        static let ALERT_ACTION_END_GAME_ALERT_MSG = "O jogo será temrinado e declarado o vencedor o jgador com maior saldo."
         
         static let COLOR_NAME_BLUE = "Azul"
         static let COLOR_NAME_BLACK = "Preto"
