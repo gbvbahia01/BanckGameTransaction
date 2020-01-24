@@ -678,28 +678,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sar-Qw-WaB" userLabel="Stack View BTs">
                                 <rect key="frame" x="10" y="321" width="394" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-sb-HFs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-sb-HFs">
                                         <rect key="frame" x="0.0" y="0.0" width="192" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="0Ko-Fq-vRD"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="zMD-Ab-ise"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Realizar Pagamento" image="bt_pay" backgroundImage="RedRec">
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Pagamento" image="bt_pay" backgroundImage="RedRec">
                                             <color key="titleColor" name="AppLightGray"/>
                                         </state>
                                         <connections>
                                             <action selector="transactionTapped:" destination="1b5-Gt-xYH" eventType="touchUpInside" id="dGe-he-l3h"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-rK-nE3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-rK-nE3">
                                         <rect key="frame" x="202" y="0.0" width="192" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="AXh-3E-exA"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="HVg-Oe-CKN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Finalizar Jogo" image="bt_end" backgroundImage="RedRec">
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Finalizar" image="bt_end" backgroundImage="RedRec">
                                             <color key="titleColor" name="AppLightGray"/>
                                         </state>
                                         <connections>
