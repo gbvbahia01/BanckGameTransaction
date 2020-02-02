@@ -37,7 +37,7 @@ class TransactionViewController: ViewController {
     }
     
     @IBAction func confirmTapped(_ sender: UIButton) {
-        print(#function)
+        //print(#function)
         let money = (transactionValueField.decimal as NSDecimalNumber).doubleValue
         if (money <= 0) {
             valueInvalid(String(money))
@@ -91,7 +91,7 @@ class TransactionViewController: ViewController {
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
-        print(#function)
+        //print(#function)
         self.navigationController?.popViewController(animated: true)
     }
     

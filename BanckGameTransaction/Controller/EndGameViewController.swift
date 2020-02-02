@@ -35,14 +35,14 @@ class EndGameViewController: ViewController {
     }
     
     @IBAction func finishTapped(_ sender: UIButton) {
-        print(#function)
+        //print(#function)
         performSegue(withIdentifier: K.SEGUE.BACK_START_PAGE,
                      sender: self)
     }
     
     //MARK: - SEGUE CALL
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(#function)
+        //print(#function)
         if K.SEGUE.BACK_START_PAGE == segue.identifier {
         }
     }

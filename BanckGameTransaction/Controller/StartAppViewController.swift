@@ -20,7 +20,7 @@ class StartAppViewController: ViewController {
     
     //MARK: - SEGUE CALL
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(#function)
+        //print(#function)
         if K.SEGUE.TO_PLAYERS_PAGE == segue.identifier {
             // TODO check if is a old game not finished
             // If have, show a alert asking the user.
@@ -28,7 +28,7 @@ class StartAppViewController: ViewController {
     }
     
     @IBAction func newGameTapped(_ sender: UIButton) {
-        print(#function)
+        //print(#function)
         performSegue(withIdentifier: K.SEGUE.TO_PLAYERS_PAGE,
                      sender: self)
     }

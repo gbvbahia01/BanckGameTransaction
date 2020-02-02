@@ -18,7 +18,7 @@ class GameViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#function)
+        //print(#function)
         
         hiddenNavigation = true
         
@@ -44,7 +44,7 @@ class GameViewController: ViewController {
     
     //MARK: - SEGUE CALL
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(#function)
+        //print(#function)
         if K.SEGUE.TO_TRANSACTION_PAGE == segue.identifier {
             let destinatonVC = segue.destination as! TransactionViewController;
             destinatonVC.game = game;
