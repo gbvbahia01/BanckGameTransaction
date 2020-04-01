@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="46J-8O-lwb">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="46J-8O-lwb">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,17 +13,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="StartAppViewController" customModule="BanckGameTransaction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gvl-6A-UMN">
-                                <rect key="frame" x="20" y="20" width="374" height="802"/>
+                                <rect key="frame" x="20" y="20" width="672" height="868"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hCl-SC-dUr">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="391"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="672" height="424"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyo-Xe-o5Z">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="117"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="672" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Qyo-Xe-o5Z" secondAttribute="height" multiplier="105:20" id="zvw-rV-epB"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="tintColor" name="AppBlue"/>
                                                 <state key="normal" title="Novo Jogo" backgroundImage="ButtonRec">
@@ -34,7 +37,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmC-Jv-vB3">
-                                                <rect key="frame" x="0.0" y="137" width="374" height="117"/>
+                                                <rect key="frame" x="0.0" y="148" width="672" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LmC-Jv-vB3" secondAttribute="height" multiplier="105:20" id="5rL-os-LWd"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="tintColor" name="AppBlue"/>
                                                 <state key="normal" title="Continuar" backgroundImage="ButtonRec">
@@ -42,24 +48,26 @@
                                                 </state>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itf-YC-OxC">
-                                                <rect key="frame" x="20" y="274" width="334" height="117"/>
+                                                <rect key="frame" x="169" y="296" width="334" height="128"/>
                                                 <color key="tintColor" name="AppLightGray"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPU-Bd-fMX">
-                                        <rect key="frame" x="20" y="411" width="334" height="391"/>
+                                        <rect key="frame" x="20" y="444" width="632" height="424"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Payment" translatesAutoresizingMaskIntoConstraints="NO" id="ghb-Er-w3Y">
-                                                <rect key="frame" x="20" y="20" width="294" height="341"/>
+                                                <rect key="frame" x="188" y="84" width="256" height="256"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="256" id="ZOh-zd-JTT"/>
+                                                    <constraint firstAttribute="width" secondItem="ghb-Er-w3Y" secondAttribute="height" multiplier="1:1" id="h2b-XX-XKP"/>
+                                                </constraints>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="ghb-Er-w3Y" secondAttribute="bottom" constant="30" id="MXY-Pq-4m7"/>
-                                            <constraint firstItem="ghb-Er-w3Y" firstAttribute="top" secondItem="FPU-Bd-fMX" secondAttribute="top" constant="20" id="auf-T7-qIY"/>
-                                            <constraint firstItem="ghb-Er-w3Y" firstAttribute="leading" secondItem="FPU-Bd-fMX" secondAttribute="leading" constant="20" id="dM3-dw-4Nt"/>
-                                            <constraint firstAttribute="trailing" secondItem="ghb-Er-w3Y" secondAttribute="trailing" constant="20" id="nv0-Bq-bfN"/>
+                                            <constraint firstItem="ghb-Er-w3Y" firstAttribute="centerY" secondItem="FPU-Bd-fMX" secondAttribute="centerY" id="s15-RI-MiN"/>
+                                            <constraint firstItem="ghb-Er-w3Y" firstAttribute="centerX" secondItem="FPU-Bd-fMX" secondAttribute="centerX" id="vTb-ke-ny9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -92,11 +100,11 @@
             <objects>
                 <viewController id="Vzg-Vj-vWl" customClass="StartMoneyViewController" customModule="BanckGameTransaction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ixA-fv-xNA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-FJ-PSG" userLabel="View Title">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor Inicial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttv-uY-erU">
                                         <rect key="frame" x="20" y="21" width="171" height="38.5"/>
@@ -114,7 +122,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mba-96-GeU" userLabel="View Icon">
-                                <rect key="frame" x="284" y="0.0" width="120" height="120"/>
+                                <rect key="frame" x="582" y="0.0" width="120" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MoneyPlayers" translatesAutoresizingMaskIntoConstraints="NO" id="lHu-pw-yDp">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -133,7 +141,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIu-Qi-I4c" userLabel="View Value">
-                                <rect key="frame" x="10" y="130" width="394" height="150"/>
+                                <rect key="frame" x="10" y="130" width="692" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor por jogador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7R-8L-zQJ">
                                         <rect key="frame" x="10" y="20" width="247.5" height="36"/>
@@ -142,7 +150,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-P4-Hhd" customClass="CurrencyField" customModule="BanckGameTransaction" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="61" width="374" height="50"/>
+                                        <rect key="frame" x="10" y="61" width="672" height="50"/>
                                         <color key="backgroundColor" name="AppLightGray"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QwR-hM-Yfl"/>
@@ -169,35 +177,93 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Ll-nP-DxB" userLabel="Stack View BTs">
-                                <rect key="frame" x="10" y="300" width="394" height="60"/>
+                                <rect key="frame" x="10" y="300" width="692" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-Xm-Cdv">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Jogadores" image="Players" backgroundImage="RedRec">
-                                            <color key="titleColor" name="AppLightGray"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="backToPlayersTapped:" destination="Vzg-Vj-vWl" eventType="touchUpInside" id="paK-NH-HZI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZd-uV-U0F">
-                                        <rect key="frame" x="202" y="0.0" width="192" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Iniciar" image="bt_start" backgroundImage="RedRec">
-                                            <color key="titleColor" name="AppLightGray"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="startGameTapped:" destination="Vzg-Vj-vWl" eventType="touchUpInside" id="x56-6e-qQb"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNs-uN-wnc">
+                                        <rect key="frame" x="0.0" y="0.0" width="341" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-Xm-Cdv">
+                                                <rect key="frame" x="13" y="0.0" width="315" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EgA-Xm-Cdv" secondAttribute="height" multiplier="90:20" id="4f5-0U-37y"/>
+                                                    <constraint firstAttribute="width" secondItem="EgA-Xm-Cdv" secondAttribute="height" multiplier="105:20" id="9vC-kO-H4x"/>
+                                                    <constraint firstAttribute="height" constant="60" id="m4a-m2-CN7"/>
+                                                    <constraint firstAttribute="height" constant="40" id="ryU-Uu-B2U"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Jogadores" image="Players" backgroundImage="RedRec">
+                                                    <color key="titleColor" name="AppLightGray"/>
+                                                </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="4f5-0U-37y"/>
+                                                        <exclude reference="ryU-Uu-B2U"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="4f5-0U-37y"/>
+                                                        <exclude reference="9vC-kO-H4x"/>
+                                                        <exclude reference="m4a-m2-CN7"/>
+                                                        <include reference="ryU-Uu-B2U"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="backToPlayersTapped:" destination="Vzg-Vj-vWl" eventType="touchUpInside" id="paK-NH-HZI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="EgA-Xm-Cdv" firstAttribute="centerY" secondItem="ZNs-uN-wnc" secondAttribute="centerY" id="uff-3I-X4K"/>
+                                            <constraint firstItem="EgA-Xm-Cdv" firstAttribute="centerX" secondItem="ZNs-uN-wnc" secondAttribute="centerX" id="ziS-1o-Acr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYs-nY-ggp">
+                                        <rect key="frame" x="351" y="0.0" width="341" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZd-uV-U0F">
+                                                <rect key="frame" x="13" y="0.0" width="315" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qZd-uV-U0F" secondAttribute="height" multiplier="105:20" id="Bxr-WT-hLf"/>
+                                                    <constraint firstAttribute="height" constant="60" id="EfN-bA-32q"/>
+                                                    <constraint firstAttribute="height" constant="40" id="JXN-iW-e11"/>
+                                                    <constraint firstAttribute="width" secondItem="qZd-uV-U0F" secondAttribute="height" multiplier="90:20" id="ljz-uW-Nn1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="Iniciar" image="bt_start" backgroundImage="RedRec">
+                                                    <color key="titleColor" name="AppLightGray"/>
+                                                </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="JXN-iW-e11"/>
+                                                        <exclude reference="ljz-uW-Nn1"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Bxr-WT-hLf"/>
+                                                        <exclude reference="EfN-bA-32q"/>
+                                                        <include reference="JXN-iW-e11"/>
+                                                        <include reference="ljz-uW-Nn1"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="startGameTapped:" destination="Vzg-Vj-vWl" eventType="touchUpInside" id="x56-6e-qQb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qZd-uV-U0F" firstAttribute="centerX" secondItem="gYs-nY-ggp" secondAttribute="centerX" id="7Eb-yU-eIY"/>
+                                            <constraint firstItem="qZd-uV-U0F" firstAttribute="centerY" secondItem="gYs-nY-ggp" secondAttribute="centerY" id="emw-Jb-D5j"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="VMX-nr-NpE"/>
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Nw-MB-g8K">
-                                <rect key="frame" x="10" y="380" width="394" height="418"/>
+                                <rect key="frame" x="10" y="380" width="692" height="594"/>
                                 <color key="backgroundColor" name="AppOrange"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -242,11 +308,11 @@
             <objects>
                 <viewController id="xKU-fo-LKT" customClass="PlayersViewController" customModule="BanckGameTransaction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2SB-1Y-tzh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFr-iq-1CM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jogadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeP-hS-zve">
                                         <rect key="frame" x="20" y="21" width="159" height="38.5"/>
@@ -264,7 +330,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UH3-Cv-hap" userLabel="View Icon">
-                                <rect key="frame" x="284" y="0.0" width="120" height="120"/>
+                                <rect key="frame" x="582" y="0.0" width="120" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Players" translatesAutoresizingMaskIntoConstraints="NO" id="10V-OM-NLf">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -283,10 +349,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iol-DY-MFn" userLabel="View P1">
-                                <rect key="frame" x="5" y="135" width="404" height="60"/>
+                                <rect key="frame" x="5" y="135" width="702" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7AO-5P-ffj" userLabel="Stack View P1">
-                                        <rect key="frame" x="5" y="13" width="394" height="34"/>
+                                        <rect key="frame" x="5" y="13" width="692" height="34"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiT-2A-pD6" userLabel="View Color P1">
                                                 <rect key="frame" x="0.0" y="2" width="30" height="30"/>
@@ -302,14 +368,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diO-bZ-p6L">
-                                                <rect key="frame" x="35" y="0.0" width="305" height="34"/>
+                                                <rect key="frame" x="35" y="0.0" width="603" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-mi-kZd">
-                                                <rect key="frame" x="345" y="1.5" width="51" height="31"/>
+                                                <rect key="frame" x="643" y="1.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -328,10 +394,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTh-0b-eGa" userLabel="View P2">
-                                <rect key="frame" x="5" y="200" width="404" height="60"/>
+                                <rect key="frame" x="5" y="200" width="702" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VhG-TN-k2W" userLabel="Stack View P2">
-                                        <rect key="frame" x="5" y="13" width="394" height="34"/>
+                                        <rect key="frame" x="5" y="13" width="692" height="34"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4C-pd-tGa">
                                                 <rect key="frame" x="0.0" y="2" width="30" height="30"/>
@@ -347,14 +413,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9g-hf-c4W">
-                                                <rect key="frame" x="35" y="0.0" width="305" height="34"/>
+                                                <rect key="frame" x="35" y="0.0" width="603" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-sN-RUG">
-                                                <rect key="frame" x="345" y="1.5" width="51" height="31"/>
+                                                <rect key="frame" x="643" y="1.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -374,10 +440,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u26-mu-LI9" userLabel="View P3">
-                                <rect key="frame" x="5" y="265" width="404" height="60"/>
+                                <rect key="frame" x="5" y="265" width="702" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fTJ-ya-zyt" userLabel="Stack View P3">
-                                        <rect key="frame" x="5" y="13" width="394" height="34"/>
+                                        <rect key="frame" x="5" y="13" width="692" height="34"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-p5-U4k">
                                                 <rect key="frame" x="0.0" y="2" width="30" height="30"/>
@@ -393,14 +459,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-gU-3JW">
-                                                <rect key="frame" x="35" y="0.0" width="305" height="34"/>
+                                                <rect key="frame" x="35" y="0.0" width="603" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zbQ-mR-CzZ">
-                                                <rect key="frame" x="345" y="1.5" width="51" height="31"/>
+                                                <rect key="frame" x="643" y="1.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -421,10 +487,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5E-eR-xj6" userLabel="View P4">
-                                <rect key="frame" x="5" y="330" width="404" height="60"/>
+                                <rect key="frame" x="5" y="330" width="702" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sSw-Ye-45F" userLabel="Stack View P4">
-                                        <rect key="frame" x="5" y="13" width="394" height="34"/>
+                                        <rect key="frame" x="5" y="13" width="692" height="34"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGg-t0-GA9">
                                                 <rect key="frame" x="0.0" y="2" width="30" height="30"/>
@@ -440,14 +506,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-lb-vI7">
-                                                <rect key="frame" x="35" y="0.0" width="305" height="34"/>
+                                                <rect key="frame" x="35" y="0.0" width="603" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7il-Ko-a9g">
-                                                <rect key="frame" x="345" y="1.5" width="51" height="31"/>
+                                                <rect key="frame" x="643" y="1.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -469,10 +535,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-my-7uC" userLabel="View P5">
-                                <rect key="frame" x="5" y="395" width="404" height="60"/>
+                                <rect key="frame" x="5" y="395" width="702" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ya0-89-dkM" userLabel="Stack View P5">
-                                        <rect key="frame" x="5" y="13" width="394" height="34"/>
+                                        <rect key="frame" x="5" y="13" width="692" height="34"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BP4-Y5-cyb">
                                                 <rect key="frame" x="0.0" y="2" width="30" height="30"/>
@@ -488,14 +554,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZzC-cG-gHs">
-                                                <rect key="frame" x="35" y="0.0" width="305" height="34"/>
+                                                <rect key="frame" x="35" y="0.0" width="603" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jFt-gr-Yl0">
-                                                <rect key="frame" x="345" y="1.5" width="51" height="31"/>
+                                                <rect key="frame" x="643" y="1.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -518,10 +584,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vM4-C0-yt6" userLabel="View P6">
-                                <rect key="frame" x="5" y="460" width="404" height="60"/>
+                                <rect key="frame" x="5" y="460" width="702" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Ub-Lb-B08" userLabel="Stack View P6">
-                                        <rect key="frame" x="5" y="13" width="394" height="34"/>
+                                        <rect key="frame" x="5" y="13" width="692" height="34"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxd-RW-Drc">
                                                 <rect key="frame" x="0.0" y="2" width="30" height="30"/>
@@ -537,14 +603,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUH-8Y-Ah3">
-                                                <rect key="frame" x="35" y="0.0" width="305" height="34"/>
+                                                <rect key="frame" x="35" y="0.0" width="603" height="34"/>
                                                 <color key="backgroundColor" name="AppLightGray"/>
                                                 <color key="textColor" name="AppBlue"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hhq-wA-vJH">
-                                                <rect key="frame" x="345" y="1.5" width="51" height="31"/>
+                                                <rect key="frame" x="643" y="1.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -567,17 +633,28 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n78-60-55c" userLabel="View BT SEGUE">
-                                <rect key="frame" x="20" y="530" width="374" height="60"/>
+                                <rect key="frame" x="20" y="530" width="672" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCa-wj-SMT">
-                                        <rect key="frame" x="20" y="0.0" width="334" height="60"/>
+                                        <rect key="frame" x="178.5" y="0.0" width="315" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="2aU-RG-rKQ"/>
+                                            <constraint firstAttribute="width" secondItem="rCa-wj-SMT" secondAttribute="height" multiplier="105:20" id="2zg-oU-bGE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <state key="normal" title="Definir Valores" image="MoneyPlayers" backgroundImage="RedRec">
                                             <color key="titleColor" name="AppLightGray"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2zg-oU-bGE"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="2zg-oU-bGE"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="startValueTapped:" destination="xKU-fo-LKT" eventType="touchUpInside" id="a9D-2l-L3i"/>
                                         </connections>
@@ -589,6 +666,11 @@
                                     <constraint firstItem="rCa-wj-SMT" firstAttribute="centerY" secondItem="n78-60-55c" secondAttribute="centerY" id="s08-2i-u9D"/>
                                     <constraint firstAttribute="height" constant="60" id="ylk-ke-LwC"/>
                                 </constraints>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="Ufb-fu-fpa"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="AppBlue"/>
@@ -654,11 +736,11 @@
             <objects>
                 <viewController id="1b5-Gt-xYH" customClass="GameViewController" customModule="BanckGameTransaction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zVU-75-7rC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablePlayerBalanceID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W7R-K4-KIB">
-                                <rect key="frame" x="10" y="0.0" width="394" height="311"/>
+                                <rect key="frame" x="10" y="0.0" width="692" height="378.5"/>
                                 <color key="backgroundColor" name="AppOrange"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -667,7 +749,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablePlayerTransactionID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kG2-fl-2gm">
-                                <rect key="frame" x="10" y="391" width="394" height="407"/>
+                                <rect key="frame" x="10" y="458.5" width="692" height="515.5"/>
                                 <color key="backgroundColor" name="AppOrange"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -676,15 +758,15 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sar-Qw-WaB" userLabel="Stack View BTs">
-                                <rect key="frame" x="10" y="321" width="394" height="60"/>
+                                <rect key="frame" x="10" y="388.5" width="692" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPh-sb-HFs">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="341" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="0Ko-Fq-vRD"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="zMD-Ab-ise"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Pagamento" image="bt_pay" backgroundImage="RedRec">
                                             <color key="titleColor" name="AppLightGray"/>
                                         </state>
@@ -693,12 +775,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-rK-nE3">
-                                        <rect key="frame" x="202" y="0.0" width="192" height="60"/>
+                                        <rect key="frame" x="351" y="0.0" width="341" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="AXh-3E-exA"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="HVg-Oe-CKN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Finalizar" image="bt_end" backgroundImage="RedRec">
                                             <color key="titleColor" name="AppLightGray"/>
                                         </state>
@@ -742,11 +824,11 @@
             <objects>
                 <viewController id="Ht6-lk-TRr" customClass="TransactionViewController" customModule="BanckGameTransaction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52M-bK-HLg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablePlayerWillPaiID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f4q-cP-p6S">
-                                <rect key="frame" x="10" y="0.0" width="394" height="269.5"/>
+                                <rect key="frame" x="10" y="0.0" width="692" height="328"/>
                                 <color key="backgroundColor" name="AppOrange"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -755,7 +837,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablePlayerWillReceiveID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-8H-bA5">
-                                <rect key="frame" x="10" y="279.5" width="394" height="259"/>
+                                <rect key="frame" x="10" y="338" width="692" height="318"/>
                                 <color key="backgroundColor" name="AppOrange"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -764,7 +846,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bU2-LA-rH9">
-                                <rect key="frame" x="10" y="548.5" width="394" height="125"/>
+                                <rect key="frame" x="10" y="666" width="692" height="125"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor da Transação:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ll-BN-0G6">
                                         <rect key="frame" x="10" y="20" width="274" height="36"/>
@@ -773,7 +855,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-Jd-iAQ" customClass="CurrencyField" customModule="BanckGameTransaction" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="61" width="374" height="50"/>
+                                        <rect key="frame" x="10" y="61" width="672" height="50"/>
                                         <color key="backgroundColor" name="AppLightGray"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="zqx-3f-czT"/>
@@ -800,10 +882,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nV6-de-FVo">
-                                <rect key="frame" x="10" y="693.5" width="394" height="60"/>
+                                <rect key="frame" x="10" y="811" width="692" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trd-wO-KOO">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="341" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="yJy-tl-Q51"/>
                                         </constraints>
@@ -816,7 +898,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WQ-KV-lQQ">
-                                        <rect key="frame" x="202" y="0.0" width="192" height="60"/>
+                                        <rect key="frame" x="351" y="0.0" width="341" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="ksb-Ra-sjN"/>
                                         </constraints>
@@ -867,11 +949,11 @@
             <objects>
                 <viewController id="ZSK-Eb-X9H" customClass="EndGameViewController" customModule="BanckGameTransaction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CbY-Hh-h1Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddB-AA-Ww1">
-                                <rect key="frame" x="10" y="10" width="394" height="677"/>
+                                <rect key="frame" x="10" y="10" width="692" height="826.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vencedor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipf-7d-Po0">
                                         <rect key="frame" x="10" y="10" width="124.5" height="31.5"/>
@@ -880,13 +962,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Jogador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pm-Fb-NGg">
-                                        <rect key="frame" x="57" y="61.5" width="280.5" height="41"/>
+                                        <rect key="frame" x="206" y="61.5" width="280.5" height="41"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                         <color key="textColor" name="AppLightGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wb9-Ju-U6K">
-                                        <rect key="frame" x="5" y="295.5" width="384" height="371.5"/>
+                                        <rect key="frame" x="5" y="295.5" width="682" height="521"/>
                                         <color key="backgroundColor" name="AppOrange"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -895,7 +977,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </tableView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Winner" translatesAutoresizingMaskIntoConstraints="NO" id="prT-L6-r2W">
-                                        <rect key="frame" x="107" y="107.5" width="180" height="180"/>
+                                        <rect key="frame" x="256" y="107.5" width="180" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="IfK-sj-aVl"/>
                                             <constraint firstAttribute="height" constant="180" id="Upb-mh-wwL"/>
@@ -924,23 +1006,54 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jnH-af-0XN">
-                                <rect key="frame" x="30" y="702" width="354" height="60"/>
+                                <rect key="frame" x="30" y="851.5" width="652" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwg-w7-fMx">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX6-dc-jaQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="652" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwg-w7-fMx">
+                                                <rect key="frame" x="168.5" y="0.0" width="315" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Fwg-w7-fMx" secondAttribute="height" multiplier="105:20" id="Yrd-fv-ieV"/>
+                                                    <constraint firstAttribute="height" constant="60" id="j5D-LM-myc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                <state key="normal" title="Encerrar" image="bt_restart" backgroundImage="RedRec"/>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="Yrd-fv-ieV"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="finishTapped:" destination="ZSK-Eb-X9H" eventType="touchUpInside" id="UpR-h1-XJw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="j5D-LM-myc"/>
+                                            <constraint firstItem="Fwg-w7-fMx" firstAttribute="centerX" secondItem="BX6-dc-jaQ" secondAttribute="centerX" id="3mO-LE-xKr"/>
+                                            <constraint firstItem="Fwg-w7-fMx" firstAttribute="top" secondItem="BX6-dc-jaQ" secondAttribute="top" id="UkM-id-VAI"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fwg-w7-fMx" secondAttribute="bottom" id="xN0-k7-rho"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                        <state key="normal" title="Encerrar" image="bt_restart" backgroundImage="RedRec"/>
-                                        <connections>
-                                            <action selector="finishTapped:" destination="ZSK-Eb-X9H" eventType="touchUpInside" id="UpR-h1-XJw"/>
-                                        </connections>
-                                    </button>
+                                        <variation key="widthClass=regular">
+                                            <mask key="subviews">
+                                                <include reference="Fwg-w7-fMx"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="3mO-LE-xKr"/>
+                                                <include reference="UkM-id-VAI"/>
+                                                <include reference="xN0-k7-rho"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="aRO-Ef-Znt"/>
                                 </constraints>
+                                <variation key="widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="BX6-dc-jaQ"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="AppBlue"/>
@@ -972,7 +1085,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="46J-8O-lwb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3kU-n4-1Iu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -985,6 +1098,10 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VK5-pT-tzG"/>
+        <segue reference="CC8-jQ-t6L"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="ButtonRec" width="1370.5" height="363"/>
         <image name="MoneyPlayers" width="37.5" height="37.5"/>
@@ -1010,7 +1127,4 @@
             <color red="1" green="0.51399999856948853" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="CC8-jQ-t6L"/>
-    </inferredMetricsTieBreakers>
 </document>
