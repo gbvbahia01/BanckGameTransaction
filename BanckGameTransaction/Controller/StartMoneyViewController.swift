@@ -38,17 +38,17 @@ class StartMoneyViewController: ViewController {
     }
     
     @IBAction func startGameTapped(_ sender: UIButton) {
-         let money = (startMoneyField.decimal as NSDecimalNumber).doubleValue
-            if (money <= 0) {
-                valueInvalid(String(money))
-                return
+        let money = (startMoneyField.decimal as NSDecimalNumber).doubleValue
+        if (money <= 0) {
+            valueInvalid(String(money))
+            return
+        }
+        if let players = game?.players {
+            for player in players {
+                player.balance = money
             }
-            if let players = game?.players {
-               for player in players {
-                   player.balance = money
-               }
-            }
-       
+        }
+        
         performSegue(withIdentifier: K.SEGUE.TO_GAME_PAGE, sender: self)
     }
     
